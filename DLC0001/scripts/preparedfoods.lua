@@ -150,18 +150,18 @@ local foods=
 		hunger = TUNING.CALORIES_HUGE,
 		perishtime = TUNING.PERISH_PRESERVED,
 		sanity = TUNING.SANITY_TINY,
-		cooktime = 2,
+		cooktime = 1,
 	},
 	meatballs =
 	{
 		test = function(cooker, names, tags) return tags.meat and not tags.inedible end,
 		priority = -1,
 		foodtype = "MEAT",
-		health = TUNING.HEALING_SMALL,
-		hunger = TUNING.CALORIES_SMALL*5,
-		perishtime = TUNING.PERISH_MED,
-		sanity = TUNING.SANITY_TINY,
-		cooktime = .75,
+		health = TUNING.HEALING_SUPERHUGE*2,
+		hunger = TUNING.CALORIES_LARGE*5,
+		perishtime = TUNING.PERISH_PRESERVED,
+		sanity = TUNING.SANITY_HUGE,
+		cooktime = .25,
 	},	
 	bonestew =
 	{
