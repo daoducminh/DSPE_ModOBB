@@ -94,8 +94,8 @@ local actionhandlers =
     ActionHandler(ACTIONS.STORE_HALF, "doshortaction"),
     ActionHandler(ACTIONS.DROP, "doshortaction"),
     ActionHandler(ACTIONS.DROP_HALF, "doshortaction"),
-    ActionHandler(ACTIONS.MURDER, "dolongaction"),
-    ActionHandler(ACTIONS.UPGRADE, "dolongaction"),
+    ActionHandler(ACTIONS.MURDER, "doshortaction"),
+    ActionHandler(ACTIONS.UPGRADE, "doshortaction"),
    	ActionHandler(ACTIONS.ACTIVATE, 
         function(inst, action)
             if action.target.components.activatable then
@@ -139,7 +139,7 @@ local actionhandlers =
     ActionHandler(ACTIONS.CHECKTRAP, "doshortaction"),
     ActionHandler(ACTIONS.RUMMAGE, "doshortaction"),
     ActionHandler(ACTIONS.BAIT, "doshortaction"),
-    ActionHandler(ACTIONS.HEAL, "dolongaction"),
+    ActionHandler(ACTIONS.HEAL, "doshortaction"),
     ActionHandler(ACTIONS.SEW, "dolongaction"),
     ActionHandler(ACTIONS.TEACH, "dolongaction"),
     ActionHandler(ACTIONS.RESETMINE, "dolongaction"),
@@ -164,7 +164,7 @@ local actionhandlers =
         end),
     ActionHandler(ACTIONS.GIVE, "give"),
     ActionHandler(ACTIONS.PLANT, "doshortaction"),
-    ActionHandler(ACTIONS.HARVEST, "dolongaction"),
+    ActionHandler(ACTIONS.HARVEST, "doshortaction"),
     ActionHandler(ACTIONS.PLAY, function(inst, action)
         if action.invobject then
             if action.invobject:HasTag("flute") then
