@@ -112,7 +112,8 @@ local actionhandlers =
                 if action.target.components.pickable.quickpick then
                     return "doshortaction"
                 else
-                    return "dolongaction"
+                    -- dolongaction before
+                    return "doshortaction"
                 end
             end
         end),
@@ -139,7 +140,7 @@ local actionhandlers =
     ActionHandler(ACTIONS.CHECKTRAP, "doshortaction"),
     ActionHandler(ACTIONS.RUMMAGE, "doshortaction"),
     ActionHandler(ACTIONS.BAIT, "doshortaction"),
-    ActionHandler(ACTIONS.HEAL, "dolongaction"),
+    ActionHandler(ACTIONS.HEAL, "doshortaction"),
     ActionHandler(ACTIONS.SEW, "dolongaction"),
     ActionHandler(ACTIONS.TEACH, "dolongaction"),
     ActionHandler(ACTIONS.RESETMINE, "dolongaction"),
@@ -161,7 +162,7 @@ local actionhandlers =
         end),
     ActionHandler(ACTIONS.GIVE, "give"),
     ActionHandler(ACTIONS.PLANT, "doshortaction"),
-    ActionHandler(ACTIONS.HARVEST, "dolongaction"),
+    ActionHandler(ACTIONS.HARVEST, "doshortaction"),
     ActionHandler(ACTIONS.PLAY, function(inst, action)
         if action.invobject then
             if action.invobject:HasTag("flute") then

@@ -112,7 +112,8 @@ local actionhandlers =
                 if action.target.components.pickable.quickpick then
                     return "doshortaction"
                 else
-                    return "dolongaction"
+                    -- dolongaction before
+                    return "doshortaction"
                 end
             end
         end),
