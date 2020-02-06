@@ -335,9 +335,9 @@ function Tune(overrides)
 	        {base=1*day_time, random=0.5*day_time}   --old
 	    },
 	    PINECONE_GROWTIME = {base=0.75*day_time, random=0.25*day_time},
-	    EVERGREEN_CHOPS_SMALL = 5,
-	    EVERGREEN_CHOPS_NORMAL = 10,
-	    EVERGREEN_CHOPS_TALL = 15,
+	    EVERGREEN_CHOPS_SMALL = 1,
+	    EVERGREEN_CHOPS_NORMAL = 1,
+	    EVERGREEN_CHOPS_TALL = 1,
 
 	    DECIDUOUS_GROW_TIME =
 	    {
@@ -347,14 +347,14 @@ function Tune(overrides)
 	        {base=1*day_time, random=0.5*day_time}   --old
 	    },
 	    ACORN_GROWTIME = {base=0.75*day_time, random=0.25*day_time},
-	   	DECIDUOUS_CHOPS_SMALL = 5,
-	    DECIDUOUS_CHOPS_NORMAL = 10,
-	    DECIDUOUS_CHOPS_TALL = 15,
-	    DECIDUOUS_CHOPS_MONSTER = 12,
+	   	DECIDUOUS_CHOPS_SMALL = 1,
+	    DECIDUOUS_CHOPS_NORMAL = 1,
+	    DECIDUOUS_CHOPS_TALL = 1,
+	    DECIDUOUS_CHOPS_MONSTER = 1,
 	
-	    MUSHTREE_CHOPS_SMALL = 10,
-	    MUSHTREE_CHOPS_MEDIUM = 10,
-	    MUSHTREE_CHOPS_TALL = 15,
+	    MUSHTREE_CHOPS_SMALL = 1,
+	    MUSHTREE_CHOPS_MEDIUM = 1,
+	    MUSHTREE_CHOPS_TALL = 1,
 	    
 	    ICE_MINE = 1,
 	    ROCKS_MINE = 1,

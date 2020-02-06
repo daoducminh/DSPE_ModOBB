@@ -135,7 +135,7 @@ local actionhandlers =
     
     ActionHandler(ACTIONS.BUILD, "dolongaction"),
     ActionHandler(ACTIONS.SHAVE, "shave"),
-    ActionHandler(ACTIONS.COOK, "dolongaction"),
+    ActionHandler(ACTIONS.COOK, "doshortaction"),
     ActionHandler(ACTIONS.PICKUP, "doshortaction"),
     ActionHandler(ACTIONS.CHECKTRAP, "doshortaction"),
     ActionHandler(ACTIONS.RUMMAGE, "doshortaction"),
