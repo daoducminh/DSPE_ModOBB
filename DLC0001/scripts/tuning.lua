@@ -863,8 +863,8 @@ function Tune(overrides)
 	    MAX_RABBIT_HOLE_TRANSITION_TIME = day_time*2,
 
 	    FULL_ABSORPTION = 1,
-	    ARMORGRASS = wilson_health*1.5,
-		ARMORGRASS_ABSORPTION = .6,
+	    ARMORGRASS = wilson_health*100,
+		ARMORGRASS_ABSORPTION = 1,
 	    ARMORWOOD = wilson_health*3,
 		ARMORWOOD_ABSORPTION = .8,
 		ARMORMARBLE = wilson_health*7,
