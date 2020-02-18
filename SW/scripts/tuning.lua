@@ -18,7 +18,7 @@ function Tune(overrides)
 	local dusk_time = seg_time * dusk_segs
 	local night_time = seg_time * night_segs
 	
-	local wilson_attack = 34
+	local wilson_attack = 100
 	local wilson_health = 150
 	local calories_per_day = 75
 	
@@ -37,51 +37,51 @@ function Tune(overrides)
 		DUSK_SEGS_DEFAULT = dusk_segs, 
 		NIGHT_SEGS_DEFAULT = night_segs,
 		
-		STACK_SIZE_LARGEITEM = 10,
-		STACK_SIZE_MEDITEM = 20,
-		STACK_SIZE_SMALLITEM = 40,
+		STACK_SIZE_LARGEITEM = 9999,
+		STACK_SIZE_MEDITEM = 9999,
+		STACK_SIZE_SMALLITEM = 9999,
 		
 		GOLDENTOOLFACTOR = 4,
 	
 	    DARK_CUTOFF = 0,
 	    DARK_SPAWNCUTOFF = 0.1,
-	    WILSON_HEALTH = wilson_health,
+	    WILSON_HEALTH = wilson_health*20,
 	    WILSON_ATTACK_PERIOD = .5,
-	    WILSON_HUNGER = 150, --stomach size
+	    WILSON_HUNGER = 1500, --stomach size
 	    WILSON_HUNGER_RATE = calories_per_day/total_day_time, --calories burnt per day
 	    
-	    WX78_MIN_HEALTH = 100,
-	    WX78_MIN_HUNGER = 100,
-	    WX78_MIN_SANITY = 100,
+	    WX78_MIN_HEALTH = 1000,
+	    WX78_MIN_HUNGER = 1000,
+	    WX78_MIN_SANITY = 1000,
 
-	    WX78_MAX_HEALTH = 400,
-	    WX78_MAX_HUNGER = 200,
-	    WX78_MAX_SANITY = 300,
+	    WX78_MAX_HEALTH = 4000,
+	    WX78_MAX_HUNGER = 2000,
+	    WX78_MAX_SANITY = 3000,
 	    
 	    WILSON_SANITY = 200,
 	    WILLOW_SANITY = 120,
 	    
-	    HAMMER_LOOT_PERCENT = .5,
+	    HAMMER_LOOT_PERCENT = 1,
 	    AXE_USES = 100,
 	    HAMMER_USES = 75,
-	    SHOVEL_USES = 25,
+	    SHOVEL_USES = 100,
 	    PITCHFORK_USES = 25,
 	    PICKAXE_USES = 33,
-	    BUGNET_USES = 10,
-	    SPEAR_USES = 150,
+	    BUGNET_USES = 100,
+	    SPEAR_USES = 1000,
 	    SPIKE_USES = 100,
 	    FISHINGROD_USES = 9,
 	    TRAP_USES = 8,
 	    BOOMERANG_USES = 10,
 	    BOOMERANG_DISTANCE = 12,
 	    NIGHTSWORD_USES = 100,
-	    ICESTAFF_USES = 20,
-	    FIRESTAFF_USES = 20,
-	    TELESTAFF_USES = 5,
+	    ICESTAFF_USES = 1000,
+	    FIRESTAFF_USES = 1000,
+	    TELESTAFF_USES = 1000,
 	    HAMBAT_USES = 100,
 	    BATBAT_USES = 75,
-	    MULTITOOL_AXE_PICKAXE_USES = 400,
-	    RUINS_BAT_USES = 150,
+	    MULTITOOL_AXE_PICKAXE_USES = 1000,
+	    RUINS_BAT_USES = 1000,
 
 		
 	    REDAMULET_USES = 20,
@@ -101,7 +101,7 @@ function Tune(overrides)
 		ORANGESTAFF_USES = 20,
 
 		GREENAMULET_USES = 5,
-		GREENAMULET_INGREDIENTMOD = 0.5,
+		GREENAMULET_INGREDIENTMOD = 1,
 		GREENSTAFF_USES = 5,
 
 
@@ -135,7 +135,7 @@ function Tune(overrides)
 	    RUINS_BAT_DAMAGE = wilson_attack * 1.75,
 
 		CANE_SPEED_MULT = 1.25,
-		PIGGYBACK_SPEED_MULT = 1,
+		PIGGYBACK_SPEED_MULT = 2,
 		RUINS_BAT_SPEED_MULT = 1.1,
 
 	    TORCH_ATTACK_IGNITE_PERCENT = 1,
@@ -293,19 +293,19 @@ function Tune(overrides)
 	    
 	    PINECONE_GROWTIME = {base=0.75*day_time, random=0.25*day_time},
 	    
-	    EVERGREEN_CHOPS_SMALL = 5,
-	    EVERGREEN_CHOPS_NORMAL = 10,
-	    EVERGREEN_CHOPS_TALL = 15,
+	    EVERGREEN_CHOPS_SMALL = 1,
+	    EVERGREEN_CHOPS_NORMAL = 1,
+	    EVERGREEN_CHOPS_TALL = 1,
 	
-	    MUSHTREE_CHOPS_SMALL = 10,
-	    MUSHTREE_CHOPS_MEDIUM = 10,
-	    MUSHTREE_CHOPS_TALL = 15,
+	    MUSHTREE_CHOPS_SMALL = 1,
+	    MUSHTREE_CHOPS_MEDIUM = 1,
+	    MUSHTREE_CHOPS_TALL = 1,
 	    
-	    ROCKS_MINE = 6,
-	    ROCKS_MINE_MED = 4,
-	    ROCKS_MINE_LOW = 2,
-	    SPILAGMITE_SPAWNER = 2,
-	    SPILAGMITE_ROCK = 4,
+	    ROCKS_MINE = 1,
+	    ROCKS_MINE_MED = 1,
+	    ROCKS_MINE_LOW = 1,
+	    SPILAGMITE_SPAWNER = 1,
+	    SPILAGMITE_ROCK = 1,
 	    MARBLEPILLAR_MINE = 10,
 	    MARBLETREE_MINE = 8,  
 	    
@@ -539,7 +539,7 @@ function Tune(overrides)
 	    HATCH_UPDATE_PERIOD = 3,
 	    HATCH_CAMPFIRE_RADIUS = 4,
 	   
-	    CHESTER_HEALTH = wilson_health*3,
+	    CHESTER_HEALTH = wilson_health*30,
 	    CHESTER_RESPAWN_TIME = total_day_time * 1,
 	    CHESTER_HEALTH_REGEN_AMOUNT = (wilson_health*3) * 3/60,
 	    CHESTER_HEALTH_REGEN_PERIOD = 3,
@@ -570,7 +570,7 @@ function Tune(overrides)
 			{
 				SCIENCE = 0,
 				MAGIC = 3,
-				ANCIENT = 0,				
+				ANCIENT = 4,				
 			},
 
 			ANCIENTALTAR_LOW =
@@ -675,8 +675,8 @@ function Tune(overrides)
 	    
 	    
 	    
-	    FISHING_CATCH_CHANCE = 0.4,
-	    FISHING_LOSEROD_CHANCE = 0.4,
+	    FISHING_CATCH_CHANCE = 1,
+	    FISHING_LOSEROD_CHANCE = 1,
 	
 	    TINY_FUEL = seg_time*.25,
 	    SMALL_FUEL = seg_time * .5,
@@ -750,8 +750,8 @@ function Tune(overrides)
 	    RABBIT_RESPAWN_TIME = day_time*4,
 	    
 	    FULL_ABSORPTION = 1,
-	    ARMORGRASS = wilson_health*1.5,
-		ARMORGRASS_ABSORPTION = .6,
+	    ARMORGRASS = wilson_health*150,
+		ARMORGRASS_ABSORPTION = 1,
 	    ARMORWOOD = wilson_health*3,
 		ARMORWOOD_ABSORPTION = .8,
 		ARMORMARBLE = wilson_health*7,
@@ -764,8 +764,8 @@ function Tune(overrides)
 		ARMORSLURPER_ABSORPTION = 0.6,
 		ARMORSLURPER_SLOW_HUNGER = 0.6,
 		ARMORSLURPER = wilson_health * 4,
-	    ARMOR_FOOTBALLHAT = wilson_health*3,
-		ARMOR_FOOTBALLHAT_ABSORPTION = .8,
+	    ARMOR_FOOTBALLHAT = wilson_health*50,
+		ARMOR_FOOTBALLHAT_ABSORPTION = 1,
 
 		ARMOR_RUINSHAT = wilson_health*8,
 		ARMOR_RUINSHAT_ABSORPTION = 0.9,
@@ -1048,15 +1048,15 @@ function Tune(overrides)
 		WOLFGANG_HUNGER_RATE_MULT_NORMAL = 1.5,
 		WOLFGANG_HUNGER_RATE_MULT_WIMPY = 1,
 		
-		WOLFGANG_HEALTH_MIGHTY = 300,
-		WOLFGANG_HEALTH_NORMAL = 200,
-		WOLFGANG_HEALTH_WIMPY = 150,
+		WOLFGANG_HEALTH_MIGHTY = 3000,
+		WOLFGANG_HEALTH_NORMAL = 2000,
+		WOLFGANG_HEALTH_WIMPY = 1500,
 
-		WOLFGANG_ATTACKMULT_MIGHTY_MAX = 2,
-		WOLFGANG_ATTACKMULT_MIGHTY_MIN = 1.25,
-		WOLFGANG_ATTACKMULT_NORMAL = 1,
-		WOLFGANG_ATTACKMULT_WIMPY_MAX = .75,
-		WOLFGANG_ATTACKMULT_WIMPY_MIN = .5,
+		WOLFGANG_ATTACKMULT_MIGHTY_MAX = 10,
+		WOLFGANG_ATTACKMULT_MIGHTY_MIN = 7.5,
+		WOLFGANG_ATTACKMULT_NORMAL = 5,
+		WOLFGANG_ATTACKMULT_WIMPY_MAX = 3,
+		WOLFGANG_ATTACKMULT_WIMPY_MIN = 1,
 
 		WENDY_DAMAGE_MULT = .75,
 		WENDY_SANITY_MULT = .75,

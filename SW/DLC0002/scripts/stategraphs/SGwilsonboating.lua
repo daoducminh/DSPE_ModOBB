@@ -58,23 +58,23 @@ local actionhandlers =
         function(inst, action)
             if action.target.components.inventoryitem then
                 if action.target.components.inventoryitem.longpickup then
-                    return "dolongaction"
+                    return "doshortaction"
                 end
             end
             return "doshortaction"
         end),
-    ActionHandler(ACTIONS.MANUALEXTINGUISH, "dolongaction"),
+    ActionHandler(ACTIONS.MANUALEXTINGUISH, "doshortaction"),
     ActionHandler(ACTIONS.DROP, "doshortaction"),
-    ActionHandler(ACTIONS.BUILD, "dolongaction"),
+    ActionHandler(ACTIONS.BUILD, "doshortaction"),
     ActionHandler(ACTIONS.DEPLOY, "doshortaction"),
     ActionHandler(ACTIONS.RUMMAGE, "doshortaction"),
-    ActionHandler(ACTIONS.TEACH, "dolongaction"),
+    ActionHandler(ACTIONS.TEACH, "doshortaction"),
     ActionHandler(ACTIONS.COMBINESTACK, "doshortaction"),
     ActionHandler(ACTIONS.BLINK, "quicktele"),
     ActionHandler(ACTIONS.GIVE, "give"),
 	ActionHandler(ACTIONS.PLANT, "doshortaction"),
 	ActionHandler(ACTIONS.PLANTONGROWABLE, "doshortaction"),
-	ActionHandler(ACTIONS.HARVEST, "dolongaction"),
+	ActionHandler(ACTIONS.HARVEST, "doshortaction"),
     ActionHandler(ACTIONS.TURNOFF, "give"),
     ActionHandler(ACTIONS.TURNON, "give"),
     ActionHandler(ACTIONS.FERTILIZE, "doshortaction"),
@@ -82,22 +82,22 @@ local actionhandlers =
     ActionHandler(ACTIONS.LIGHT, "give"),
     ActionHandler(ACTIONS.ADDFUEL, "doshortaction"),
     ActionHandler(ACTIONS.ADDWETFUEL, "doshortaction"),
-    ActionHandler(ACTIONS.LAUNCH, "dolongaction"),
-    ActionHandler(ACTIONS.RETRIEVE, "dolongaction"),
-    ActionHandler(ACTIONS.REPAIR, "dolongaction"),
-    ActionHandler(ACTIONS.REPAIRBOAT, "dolongaction"),
+    ActionHandler(ACTIONS.LAUNCH, "doshortaction"),
+    ActionHandler(ACTIONS.RETRIEVE, "doshortaction"),
+    ActionHandler(ACTIONS.REPAIR, "doshortaction"),
+    ActionHandler(ACTIONS.REPAIRBOAT, "doshortaction"),
     ActionHandler(ACTIONS.READ, "book"),
     ActionHandler(ACTIONS.READMAP, "map"),
     ActionHandler(ACTIONS.MAKEBALLOON, "makeballoon"),
-    ActionHandler(ACTIONS.MURDER, "dolongaction"),
-    ActionHandler(ACTIONS.TAKEITEM, "dolongaction" ),
+    ActionHandler(ACTIONS.MURDER, "doshortaction"),
+    ActionHandler(ACTIONS.TAKEITEM, "doshortaction" ),
     ActionHandler(ACTIONS.SHAVE, "shave"),
-    ActionHandler(ACTIONS.COOK, "dolongaction"),
+    ActionHandler(ACTIONS.COOK, "doshortaction"),
     ActionHandler(ACTIONS.CHECKTRAP, "doshortaction"),
     ActionHandler(ACTIONS.BAIT, "doshortaction"),
-    ActionHandler(ACTIONS.HEAL, "dolongaction"),
+    ActionHandler(ACTIONS.HEAL, "doshortaction"),
     ActionHandler(ACTIONS.CUREPOISON, "curepoison"),
-    ActionHandler(ACTIONS.SEW, "dolongaction"),
+    ActionHandler(ACTIONS.SEW, "doshortaction"),
     ActionHandler(ACTIONS.FAN, "use_fan"),
     ActionHandler(ACTIONS.TOGGLEOFF, "give"),
     ActionHandler(ACTIONS.TOGGLEON, "give"),
@@ -149,7 +149,7 @@ local actionhandlers =
                 if action.target.components.activatable.quickaction then
                     return "doshortaction"
                 else
-                    return "dolongaction"
+                    return "doshortaction"
                 end
             end
         end),  
@@ -160,7 +160,7 @@ local actionhandlers =
                 if action.target.components.pickable.quickpick then
                     return "doshortaction"
                 else
-                    return "dolongaction"
+                    return "doshortaction"
                 end
             end
         end),
@@ -200,7 +200,7 @@ local actionhandlers =
     ActionHandler(ACTIONS.STICK, "doshortaction"),
     ActionHandler(ACTIONS.THROW, "throw"),
     ActionHandler(ACTIONS.LAUNCH_THROWABLE, "cannon"),
-    ActionHandler(ACTIONS.FEED, "dolongaction"),
+    ActionHandler(ACTIONS.FEED, "doshortaction"),
 }
 
 local function OnAttackFn(inst, data)

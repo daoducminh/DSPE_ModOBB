@@ -18,8 +18,8 @@ function Tune(overrides)
 	local dusk_time = seg_time * dusk_segs
 	local night_time = seg_time * night_segs
 
-	local wilson_attack = 34
-	local wilson_health = 150
+	local wilson_attack = 100
+	local wilson_health = 1500
 	local calories_per_day = 75
 
 	local wilson_attack_period = .5
@@ -37,53 +37,53 @@ function Tune(overrides)
 		DUSK_SEGS_DEFAULT = dusk_segs,
 		NIGHT_SEGS_DEFAULT = night_segs,
 
-		STACK_SIZE_LARGEITEM = 10,
-		STACK_SIZE_MEDITEM = 20,
-		STACK_SIZE_SMALLITEM = 40,
+		STACK_SIZE_LARGEITEM = 9999,
+		STACK_SIZE_MEDITEM = 9999,
+		STACK_SIZE_SMALLITEM = 9999,
 
 		GOLDENTOOLFACTOR = 4,
-		OBSIDIANTOOLFACTOR = 2.5,
-		OBSIDIANTOOL_WORK = 2.5,
+		OBSIDIANTOOLFACTOR = 10,
+		OBSIDIANTOOL_WORK = 10,
 
 	    DARK_CUTOFF = 0,
 	    DARK_SPAWNCUTOFF = 0.1,
-	    WILSON_HEALTH = wilson_health,
+	    WILSON_HEALTH = wilson_health*20,
 	    WILSON_ATTACK_PERIOD = .5,
-	    WILSON_HUNGER = 150, --stomach size
+	    WILSON_HUNGER = 1500, --stomach size
 	    WILSON_HUNGER_RATE = calories_per_day/total_day_time, --calories burnt per day
 
-	    WX78_MIN_HEALTH = 100,
-	    WX78_MIN_HUNGER = 100,
-	    WX78_MIN_SANITY = 100,
+	    WX78_MIN_HEALTH = 1000,
+	    WX78_MIN_HUNGER = 1000,
+	    WX78_MIN_SANITY = 1000,
 
-	    WX78_MAX_HEALTH = 400,
-	    WX78_MAX_HUNGER = 200,
-	    WX78_MAX_SANITY = 300,
+	    WX78_MAX_HEALTH = 4000,
+	    WX78_MAX_HUNGER = 2000,
+	    WX78_MAX_SANITY = 3000,
 
 	    WILSON_SANITY = 200,
 	    WILLOW_SANITY = 120,
 
-	    HAMMER_LOOT_PERCENT = .5,
+	    HAMMER_LOOT_PERCENT = 2,
 	    BURNT_HAMMER_LOOT_PERCENT = .25,
 	    AXE_USES = 100,
 	    HAMMER_USES = 75,
-	    SHOVEL_USES = 25,
+	    SHOVEL_USES = 100,
 	    PITCHFORK_USES = 25,
-	    PICKAXE_USES = 33,
+	    PICKAXE_USES = 100,
 	    BUGNET_USES = 10,
-	    SPEAR_USES = 150,
-	    WATHGRITHR_SPEAR_USES = 200,
+	    SPEAR_USES = 1000,
+	    WATHGRITHR_SPEAR_USES = 1000,
 	    SPIKE_USES = 100,
 	    FISHINGROD_USES = 9,
-	    FISHINGROD_MIN_WAIT_TIME = 4,
-	    FISHINGROD_MAX_WAIT_TIME = 40,
+	    FISHINGROD_MIN_WAIT_TIME = 1,
+	    FISHINGROD_MAX_WAIT_TIME = 2,
 	    TRAP_USES = 8,
 	    BOOMERANG_USES = 10,
 	    BOOMERANG_DISTANCE = 12,
 	    NIGHTSWORD_USES = 100,
-	    ICESTAFF_USES = 20,
-	    FIRESTAFF_USES = 20,
-	    TELESTAFF_USES = 5,
+	    ICESTAFF_USES = 1000,
+	    FIRESTAFF_USES = 1000,
+	    TELESTAFF_USES = 1000,
 	    HAMBAT_USES = 100,
 	    BATBAT_USES = 75,
 	    MULTITOOL_AXE_PICKAXE_USES = 400,
@@ -114,12 +114,12 @@ function Tune(overrides)
 		GREENSTAFF_USES = 5,
 
 
-	    FISHING_MINWAIT = 2,
-	    FISHING_MAXWAIT = 20,
+	    FISHING_MINWAIT = 1,
+	    FISHING_MAXWAIT = 2,
 
 		RESEARCH_MACHINE_DIST = 4,
 
-	    UNARMED_DAMAGE = 10,
+	    UNARMED_DAMAGE = 100,
 	    NIGHTSWORD_DAMAGE = wilson_attack*2,
 	    -------
 	    BATBAT_DAMAGE = wilson_attack * 1.25,
@@ -128,7 +128,7 @@ function Tune(overrides)
 	    SPIKE_DAMAGE = wilson_attack*1.5,
 		HAMBAT_DAMAGE = wilson_attack*1.75,
 		HAMBAT_MIN_DAMAGE_MODIFIER = .5,
-	    SPEAR_DAMAGE = wilson_attack,
+	    SPEAR_DAMAGE = wilson_attack*50,
 	    WATHGRITHR_SPEAR_DAMAGE = wilson_attack * 1.25,
 	    AXE_DAMAGE = wilson_attack*.8,
 	    PICK_DAMAGE = wilson_attack*.8,
@@ -148,9 +148,9 @@ function Tune(overrides)
 	    OBSIDIAN_SPEAR_DAMAGE = wilson_attack * 1.5, --Deals up to double damage with use.
 
 		CANE_SPEED_MULT = 0.25,
-		PIGGYBACK_SPEED_MULT = -0.1,
+		PIGGYBACK_SPEED_MULT = 2,
 		YELLOW_AMULET_SPEED_MULT = 0.2,
-		ICE_HAT_SPEED_MULT = -0.1,
+		ICE_HAT_SPEED_MULT = 1,
 		RUINS_BAT_SPEED_MULT = 0.1,
 
 	    TORCH_ATTACK_IGNITE_PERCENT = 1,
@@ -311,13 +311,13 @@ function Tune(overrides)
 
 	    GRUEDAMAGE = wilson_health*.667,
 
-	    MARSHBUSH_DAMAGE = wilson_health*.02,
-	    CACTUS_DAMAGE = wilson_health*.04,
+	    MARSHBUSH_DAMAGE = 5,
+	    CACTUS_DAMAGE = 5,
 
 	    GHOST_SPEED = 2,
 	    GHOST_HEALTH = 200,
 	    GHOST_RADIUS = 1.8,
-	    GHOST_DAMAGE = wilson_health*0.1,
+	    GHOST_DAMAGE = 5,
 	    GHOST_DMG_PERIOD = 1.2,
 	    GHOST_DMG_PLAYER_PERCENT = 1,
 
@@ -341,9 +341,9 @@ function Tune(overrides)
 	        {base=1*day_time, random=0.5*day_time}   --old
 	    },
 	    PINECONE_GROWTIME = {base=0.75*day_time, random=0.25*day_time},
-	    EVERGREEN_CHOPS_SMALL = 5,
-	    EVERGREEN_CHOPS_NORMAL = 10,
-	    EVERGREEN_CHOPS_TALL = 15,
+	    EVERGREEN_CHOPS_SMALL = 1,
+	    EVERGREEN_CHOPS_NORMAL = 1,
+	    EVERGREEN_CHOPS_TALL = 1,
 	    EVERGREEN_WINDBLOWN_SPEED = 0.2,
 	    EVERGREEN_WINDBLOWN_FALL_CHANCE = 0.01,
 
@@ -355,23 +355,23 @@ function Tune(overrides)
 	        {base=1*day_time, random=0.5*day_time}   --old
 	    },
 	    ACORN_GROWTIME = {base=0.75*day_time, random=0.25*day_time},
-	   	DECIDUOUS_CHOPS_SMALL = 5,
-	    DECIDUOUS_CHOPS_NORMAL = 10,
-	    DECIDUOUS_CHOPS_TALL = 15,
-	    DECIDUOUS_CHOPS_MONSTER = 12,
+	   	DECIDUOUS_CHOPS_SMALL = 1,
+	    DECIDUOUS_CHOPS_NORMAL = 1,
+	    DECIDUOUS_CHOPS_TALL = 1,
+	    DECIDUOUS_CHOPS_MONSTER = 5,
 	    DECIDUOUS_WINDBLOWN_SPEED = 0.2,
 	    DECIDUOUS_WINDBLOWN_FALL_CHANCE = 0.01,
 
-	    MUSHTREE_CHOPS_SMALL = 10,
-	    MUSHTREE_CHOPS_MEDIUM = 10,
-	    MUSHTREE_CHOPS_TALL = 15,
+	    MUSHTREE_CHOPS_SMALL = 1,
+	    MUSHTREE_CHOPS_MEDIUM = 1,
+	    MUSHTREE_CHOPS_TALL = 1,
 
-	    ICE_MINE = 6,
-	    ROCKS_MINE = 6,
-	    ROCKS_MINE_MED = 4,
-	    ROCKS_MINE_LOW = 2,
-	    SPILAGMITE_SPAWNER = 2,
-	    SPILAGMITE_ROCK = 4,
+	    ICE_MINE = 1,
+	    ROCKS_MINE = 1,
+	    ROCKS_MINE_MED = 1,
+	    ROCKS_MINE_LOW = 1,
+	    SPILAGMITE_SPAWNER = 1,
+	    SPILAGMITE_ROCK = 1,
 	    MARBLEPILLAR_MINE = 10,
 	    MARBLETREE_MINE = 8,
 
@@ -643,10 +643,10 @@ function Tune(overrides)
 			ALCHEMYMACHINE =
 			{
 				SCIENCE = 2,
-				MAGIC = 1,
-				ANCIENT = 0,
-				OBSIDIAN = 0,
-				WATER = 0,
+				MAGIC = 3,
+				ANCIENT = 4,
+				OBSIDIAN = 2,
+				WATER = 2,
 			},
 
 			PRESTIHATITATOR =
@@ -924,8 +924,8 @@ function Tune(overrides)
 	    MAX_RABBIT_HOLE_TRANSITION_TIME = day_time*2,
 
 	    FULL_ABSORPTION = 1,
-	    ARMORGRASS = wilson_health*1.5,
-		ARMORGRASS_ABSORPTION = .6,
+	    ARMORGRASS = wilson_health*10,
+		ARMORGRASS_ABSORPTION = 1,
 	    ARMORWOOD = wilson_health*3,
 		ARMORWOOD_ABSORPTION = .8,
 		ARMORMARBLE = wilson_health*7,
@@ -938,8 +938,8 @@ function Tune(overrides)
 		ARMORSLURPER_ABSORPTION = 0.6,
 		ARMORSLURPER_SLOW_HUNGER = -0.4,
 		ARMORSLURPER = wilson_health * 4,
-	    ARMOR_FOOTBALLHAT = wilson_health*3,
-		ARMOR_FOOTBALLHAT_ABSORPTION = .8,
+	    ARMOR_FOOTBALLHAT = wilson_health*500,
+		ARMOR_FOOTBALLHAT_ABSORPTION = 1,
 
 	    ARMOR_OXHAT = wilson_health*4,
 		ARMOR_OXHAT_ABSORPTION = .85,
@@ -1369,13 +1369,13 @@ function Tune(overrides)
 		WX78_MAX_MOISTURE_DAMAGE = -.5,
 		WX78_MOISTURE_DRYING_DAMAGE = -.3,
 
-		WALANI_HEALTH = 120,
-		WALANI_SANITY = 200,
-		WALANI_HUNGER = 200,
+		WALANI_HEALTH = 1200,
+		WALANI_SANITY = 2000,
+		WALANI_HUNGER = 2000,
 		WALANI_SANITY_RATE_MODIFIER = -0.1,
 		WALANI_HUNGER_RATE_MODIFIER = 0.2,
 
-		WARLY_HUNGER = 250,
+		WARLY_HUNGER = 2500,
 		WARLY_HUNGER_RATE_MODIFIER = 0.33,
 		WARLY_MULT_PREPARED = 1.33, -- warly's crock pot bonus
 		WARLY_MULT_COOKED = 0.9,
@@ -1384,15 +1384,15 @@ function Tune(overrides)
 		WARLY_MULT_SAME_OLD = {0.9, 0.8, 0.65, 0.5, 0.3}, -- applied as a scale when eating the same thing in a row.
 		WARLY_SAME_OLD_COOLDOWN = total_day_time * 1.75,
 
-		WILBUR_WALK_SPEED_PENALTY = -0.5,
+		WILBUR_WALK_SPEED_PENALTY = 1,
 		WILBUR_SPEED_BONUS = 2.5,
 		WILBUR_TIME_TO_RUN = 3,
 		WILBUR_RUN_HUNGER_RATE_MULT = 0.33,
-		WILBUR_HEALTH = 125,
-		WILBUR_HUNGER = 175,
-		WILBUR_SANITY = 150,
+		WILBUR_HEALTH = 1250,
+		WILBUR_HUNGER = 1750,
+		WILBUR_SANITY = 1500,
 
-		WOLFGANG_HUNGER = 300,
+		WOLFGANG_HUNGER = 3000,
 		WOLFGANG_START_HUNGER = 200,
 		WOLFGANG_START_MIGHTY_THRESH = 225,
 		WOLFGANG_END_MIGHTY_THRESH = 220,
@@ -1403,21 +1403,21 @@ function Tune(overrides)
 		WOLFGANG_HUNGER_RATE_MULT_NORMAL = 0.5,
 		WOLFGANG_HUNGER_RATE_MULT_WIMPY = 0.0,
 
-		WOLFGANG_HEALTH_MIGHTY = 300,
-		WOLFGANG_HEALTH_NORMAL = 200,
-		WOLFGANG_HEALTH_WIMPY = 150,
+		WOLFGANG_HEALTH_MIGHTY = 3000,
+		WOLFGANG_HEALTH_NORMAL = 2000,
+		WOLFGANG_HEALTH_WIMPY = 1500,
 
-		WOLFGANG_ATTACKMULT_MIGHTY_MAX 	= 1.00,
-		WOLFGANG_ATTACKMULT_MIGHTY_MIN 	= 0.25,
-		WOLFGANG_ATTACKMULT_NORMAL 		= 0.00,
-		WOLFGANG_ATTACKMULT_WIMPY_MAX 	= -0.25,
-		WOLFGANG_ATTACKMULT_WIMPY_MIN 	= -0.50,
+		WOLFGANG_ATTACKMULT_MIGHTY_MAX 	= 10,
+		WOLFGANG_ATTACKMULT_MIGHTY_MIN 	= 7.5,
+		WOLFGANG_ATTACKMULT_NORMAL 		= 5,
+		WOLFGANG_ATTACKMULT_WIMPY_MAX 	= 3,
+		WOLFGANG_ATTACKMULT_WIMPY_MIN 	= 1,
 
-		WATHGRITHR_HEALTH = 200,
-		WATHGRITHR_SANITY = 120,
-		WATHGRITHR_HUNGER = 120,
-		WATHGRITHR_DAMAGE_MULT = 0.25,
-		WATHGRITHR_ABSORPTION = 0.25,
+		WATHGRITHR_HEALTH = 2000,
+		WATHGRITHR_SANITY = 1200,
+		WATHGRITHR_HUNGER = 1200,
+		WATHGRITHR_DAMAGE_MULT = 5,
+		WATHGRITHR_ABSORPTION = 0.9,
 
 		WEBBER_HEALTH = 175,
 		WEBBER_SANITY = 100,
@@ -1651,16 +1651,16 @@ function Tune(overrides)
 		REDBARREL_DAMAGE = 400,
 
 	    -- Global doydoy controls
-	    DOYDOY_MAX_POPULATION = 20,
+	    DOYDOY_MAX_POPULATION = 100,
 	    DOYDOY_SPAWN_TIMER = total_day_time * 2, -- try to mate some doydoy's after this ammount of time + random variance
 		DOYDOY_SPAWN_VARIANCE = total_day_time,
-		DOYDOY_MATING_RANGE = 15,
-		DOYDOY_MATING_DANCE_TIME = 3, -- how long should they dance?
+		DOYDOY_MATING_RANGE = 20,
+		DOYDOY_MATING_DANCE_TIME = 1, -- how long should they dance?
 		DOYDOY_MATING_DANCE_DIST = 3, -- how far away should they dance?
-		DOYDOY_MATING_FEATHER_CHANCE = 0.2, -- feather drop chance after mating
+		DOYDOY_MATING_FEATHER_CHANCE = 1, -- feather drop chance after mating
 
 		-- doesn't really matter much for the herds
-	    DOYDOY_HERD_SIZE = 20,
+	    DOYDOY_HERD_SIZE = 100,
 	    DOYDOY_HERD_GATHER_RANGE = 40,
 
 		DOYDOY_EGG_HATCH_TIMER = total_day_time * 2,
@@ -1725,18 +1725,18 @@ function Tune(overrides)
 
 
 	    MACHETE_DAMAGE = wilson_attack* .88,
-	    MACHETE_USES = 100,
+	    MACHETE_USES = 1000,
 
 	    CUTLASS_DAMAGE = wilson_attack*2,
 	    CUTLASS_BONUS_DAMAGE = wilson_attack*1,
-	    CUTLASS_USES = 150,
+	    CUTLASS_USES = 1500,
 
-	    BAMBOO_HACKS = 6,
+	    BAMBOO_HACKS = 1,
 	    BAMBOO_REGROW_TIME = total_day_time*4,
 	    BAMBOO_WINDBLOWN_SPEED = 0.2,
 	    BAMBOO_WINDBLOWN_FALL_CHANCE = 0.1,
 
-	    VINE_HACKS = 6,
+	    VINE_HACKS = 1,
 	    VINE_REGROW_TIME = total_day_time*4,
 	    VINE_WINDBLOWN_SPEED = 0.2,
 	    VINE_WINDBLOWN_FALL_CHANCE = 0.1,
@@ -1755,47 +1755,47 @@ function Tune(overrides)
 	    
 	    TARSUIT_PERISHTIME = total_day_time,
 
-	    ROWBOAT_HEALTH = 250,
+	    ROWBOAT_HEALTH = 2500,
 	    ROWBOAT_PERISHTIME = total_day_time*3,
 	    ROWBOAT_SANITY_DRAIN = 0,-- -0.08,
-	    ROWBOAT_SPEED = 0,
+	    ROWBOAT_SPEED = 3,
 	    ROWBOAT_LEAKING_HEALTH = 40,
 
-	    RAFT_HEALTH = 150,
+	    RAFT_HEALTH = 1500,
 	    RAFT_PERISHTIME = total_day_time*2,
 	    RAFT_SANITY_DRAIN = 0,-- -0.12,
-	    RAFT_SPEED = -1,
+	    RAFT_SPEED = 2,
 	    RAFT_HITMOISTURERATE = 1.25,
 	    RAFT_LEAKING_HEALTH = 40,
 
-	    LOGRAFT_HEALTH = 150,
+	    LOGRAFT_HEALTH = 1500,
 	    LOGRAFT_PERISHTIME = total_day_time*2,
 	    LOGRAFT_SANITY_DRAIN = 0,-- -0.12,
-	    LOGRAFT_SPEED = -2,
+	    LOGRAFT_SPEED = 2,
 	    LOGRAFT_LEAKING_HEALTH = 40,
 
-	    CARGOBOAT_HEALTH = 300,
+	    CARGOBOAT_HEALTH = 3000,
 	    CARGOBOAT_PERISHTIME = total_day_time*3,
 	    CARGOBOAT_SANITY_DRAIN = 0,-- -0.08,
-	    CARGOBOAT_SPEED = -1,
+	    CARGOBOAT_SPEED = 3,
 	    CARGOBOAT_LEAKING_HEALTH = 40,
 
-	    ARMOUREDBOAT_HEALTH = 500,
+	    ARMOUREDBOAT_HEALTH = 5000,
 	    ARMOUREDBOAT_PERISHTIME = total_day_time*4,
 	    ARMOUREDBOAT_SANITY_DRAIN = 0,-- -0.08,
-	    ARMOUREDBOAT_SPEED = 0,
+	    ARMOUREDBOAT_SPEED = 3,
 	    ARMOUREDBOAT_LEAKING_HEALTH = 40,
 	    ARMOUREDBOAT_HIT_IMMUNITY = 3,
 
-			ENCRUSTEDBOAT_HEALTH = 800,
+		ENCRUSTEDBOAT_HEALTH = 8000,
 	    ENCRUSTEDBOAT_PERISHTIME = total_day_time*5,
 	    ENCRUSTEDBOAT_SANITY_DRAIN = 0,
-	    ENCRUSTEDBOAT_SPEED = -2,
+	    ENCRUSTEDBOAT_SPEED = 3,
 	    ENCRUSTEDBOAT_LEAKING_HEALTH = 40,
 	    ENCRUSTEDBOAT_HIT_IMMUNITY = 4,
 
-	    WOODLEGSBOAT_SPEED = 0,
-	    WOODLEGSBOAT_HEALTH = 500,
+	    WOODLEGSBOAT_SPEED = 2,
+	    WOODLEGSBOAT_HEALTH = 5000,
 	    WOODLEGSBOAT_DAMAGESCALE = 0.5,
 	    WOODLEGSBOAT_LEAKING_HEALTH = 40,
 	    WOODLEGSBOAT_HIT_IMMUNITY = 2,
@@ -1804,9 +1804,9 @@ function Tune(overrides)
 	    BOAT_LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
 	    BOTTLE_LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
 
-	    SAIL_SPEED_MULT = 0.2,
-	    SAIL_ACCEL_MULT = 0,
-	    SAIL_PERISH_TIME = total_day_time*2,
+	    SAIL_SPEED_MULT = 1,
+	    SAIL_ACCEL_MULT = 2,
+	    SAIL_PERISH_TIME = total_day_time*20,
 
 	    CLOTH_SAIL_SPEED_MULT = 0.3,
 	    CLOTH_SAIL_ACCEL_MULT = 0.5,
@@ -1828,9 +1828,9 @@ function Tune(overrides)
 
 	    LIMPET_REGROW_TIME =  total_day_time*3,
 
-	    TELESCOPE_USES = 5,
-	    TELESCOPE_RANGE = 200,
-	    TELESCOPE_ARC = 15, --degrees
+	    TELESCOPE_USES = 500,
+	    TELESCOPE_RANGE = 1000,
+	    TELESCOPE_ARC = 90, --degrees
 
 	    SUPERTELESCOPE_RANGE = 400,
 
@@ -1842,12 +1842,12 @@ function Tune(overrides)
 	    PEG_LEG_USES = 50,
 
 
-	    HARPOON_DAMAGE = 200,
-	    HARPOON_USES = 10,
-	    HARPOON_RANGE = 6,
-	    HARPOON_SPEED = 30,
+	    HARPOON_DAMAGE = 500,
+	    HARPOON_USES = 1000,
+	    HARPOON_RANGE = 10,
+	    HARPOON_SPEED = 50,
 
-	    VOLCANOSTAFF_USES = 5,
+	    VOLCANOSTAFF_USES = 50,
 	    VOLCANOSTAFF_FIRERAIN_COUNT = 8,
 	    VOLCANOSTAFF_FIRERAIN_RADIUS = 5,
 	    VOLCANOSTAFF_FIRERAIN_DELAY = 0.5,
@@ -2015,14 +2015,14 @@ function Tune(overrides)
 
         BALLPHIN_TARGET_DIST = 8,
 		BALLPHIN_KEEP_TARGET_DIST = 15,
-		BALLPHIN_FRIEND_CHANCE = 0.01, -- chance that ballphins will spawn to assist you during a crocodog attack
+		BALLPHIN_FRIEND_CHANCE = 1, -- chance that ballphins will spawn to assist you during a crocodog attack
 		BALLPHIN_LOYALTY_PER_HUNGER = total_day_time/12,
 		BALLPHIN_LOYALTY_MAX_TIME = total_day_time * 3,
 		BALLPHIN_MIN_POOP_PERIOD = seg_time * .5,
-		BALLPHIN_DROWN_RESCUE_CHANCE = .8,
+		BALLPHIN_DROWN_RESCUE_CHANCE = 1,
 		BALLPHIN_HEALTH = 200,
-		BALLPHIN_DAMAGE = 25,
-		BALLPHIN_ATTACK_PERIOD = 3,
+		BALLPHIN_DAMAGE = 75,
+		BALLPHIN_ATTACK_PERIOD = 2,
 
 	    DRAGOON_TARGET_DIST = 8,
 		DRAGOON_KEEP_TARGET_DIST = 10,
@@ -2043,9 +2043,9 @@ function Tune(overrides)
 	        {base=1*day_time, random=0.5*day_time}, -- bloat3
 	    },
 
-	    JUNGLETREE_CHOPS_SMALL = 5,
-	    JUNGLETREE_CHOPS_NORMAL = 10,
-	    JUNGLETREE_CHOPS_TALL = 15,
+	    JUNGLETREE_CHOPS_SMALL = 1,
+	    JUNGLETREE_CHOPS_NORMAL = 1,
+	    JUNGLETREE_CHOPS_TALL = 1,
 	    JUNGLETREE_WINDBLOWN_SPEED = 0.2,
 	    JUNGLETREE_WINDBLOWN_FALL_CHANCE = 0.01,
 
@@ -2067,14 +2067,14 @@ function Tune(overrides)
 	        {base=5*day_time, random=2*day_time},   --normal to tall
 	    },
 
-	   	PALMTREE_CHOPS_SMALL = 5,
-	    PALMTREE_CHOPS_NORMAL = 10,
-	    PALMTREE_CHOPS_TALL = 15,
-	    PALMTREE_COCONUT_CHANCE = 0.01,
+	   	PALMTREE_CHOPS_SMALL = 1,
+	    PALMTREE_CHOPS_NORMAL = 1,
+	    PALMTREE_CHOPS_TALL = 1,
+	    PALMTREE_COCONUT_CHANCE = 1,
 
-	    MANGROVETREE_CHOPS_SMALL = 5,
-	    MANGROVETREE_CHOPS_NORMAL = 10,
-	    MANGROVETREE_CHOPS_TALL = 15,
+	    MANGROVETREE_CHOPS_SMALL = 1,
+	    MANGROVETREE_CHOPS_NORMAL = 1,
+	    MANGROVETREE_CHOPS_TALL = 1,
 	    MANGROVETREE_WINDBLOWN_SPEED = 0.2,
 	    MANGROVETREE_WINDBLOWN_FALL_CHANCE = 0.01,
 	    MANGROVETREE_GROW_TIME =
@@ -2085,7 +2085,7 @@ function Tune(overrides)
 	        {base=2.5*day_time, random=0.75*day_time}   --stump to short
 	    },
 
-	    SPEARGUN_DAMAGE = 100,
+	    SPEARGUN_DAMAGE = 500,
 
 	    ARMOR_SNAKESKIN_PERISHTIME = total_day_time*8, --was 10
 	    SNAKESKINHAT_PERISHTIME = total_day_time*8, --was 10
@@ -2167,14 +2167,14 @@ function Tune(overrides)
 
 	    FISHING_ROD_BASE_NIBBLE_TIME = 5,
 	    FISHING_ROD_NIBBLE_TIME_VARIANCE = 5,
-	    FISHING_ROD_STEAL_CHANCE = 50,
+	    FISHING_ROD_STEAL_CHANCE = 0,
 
-	    BIG_FISHING_ROD_BASE_NIBBLE_TIME = 2, --For catching fish entities (fishing 2)
-	    BIG_FISHING_ROD_NIBBLE_TIME_VARIANCE = 2, --For catching fish entities (fishing 2)
+	    BIG_FISHING_ROD_BASE_NIBBLE_TIME = 1, --For catching fish entities (fishing 2)
+	    BIG_FISHING_ROD_NIBBLE_TIME_VARIANCE = 1, --For catching fish entities (fishing 2)
 	    BIG_FISHING_ROD_STEAL_CHANCE = 0,
-	    BIG_FISHING_ROD_USES = 14,
-	    BIG_FISHING_ROD_MIN_WAIT_TIME = 4, --For pond fishing
-	    BIG_FISHING_ROD_MAX_WAIT_TIME = 20, --For pond fishing
+	    BIG_FISHING_ROD_USES = 140,
+	    BIG_FISHING_ROD_MIN_WAIT_TIME = 1, --For pond fishing
+	    BIG_FISHING_ROD_MAX_WAIT_TIME = 2, --For pond fishing
 
 	    CAFFEINE_FOOD_BONUS_SPEED = 5, -- player base speed plus this, 6 is normal walk speed
 		HYDRO_FOOD_BONUS_DRY = 1, -- player base speed plus this, 6 is normal walk speed
@@ -2265,10 +2265,10 @@ function Tune(overrides)
 		MAPEDGE_PADDING = 14 + 10, --Should be greater than MAPWRAPPER_WARN_RANGE
 
 		WOODLEGS_BOATCANNON_DAMAGE = 50,
-		BOATCANNON_DAMAGE = 100,
+		BOATCANNON_DAMAGE = 500,
 		BOATCANNON_RADIUS = 4,
-		BOATCANNON_BUILDINGDAMAGE = 10,
-	    BOATCANNON_AMMO_COUNT = 15,
+		BOATCANNON_BUILDINGDAMAGE = 100,
+	    BOATCANNON_AMMO_COUNT = 100,
 
 	    WINDBREAKER_PERISHTIME = total_day_time*10, --was 15
 	    AERODYNAMICHAT_PERISHTIME = 48*seg_time, --was 8

@@ -88,8 +88,8 @@ local actionhandlers =
     ActionHandler(ACTIONS.FISHOCEAN, "fish_ocean"),
 
 	ActionHandler(ACTIONS.FERTILIZE, "doshortaction"),
-    ActionHandler(ACTIONS.SMOTHER, "dolongaction"),
-    ActionHandler(ACTIONS.MANUALEXTINGUISH, "dolongaction"),
+    ActionHandler(ACTIONS.SMOTHER, "doshortaction"),
+    ActionHandler(ACTIONS.MANUALEXTINGUISH, "doshortaction"),
     ActionHandler(ACTIONS.RANGEDSMOTHER, "attack"),
 	ActionHandler(ACTIONS.TRAVEL, "doshortaction"),
     ActionHandler(ACTIONS.LIGHT, "give"),
@@ -100,8 +100,8 @@ local actionhandlers =
     ActionHandler(ACTIONS.TOGGLEON, "give"),
     ActionHandler(ACTIONS.ADDFUEL, "doshortaction"),
     ActionHandler(ACTIONS.ADDWETFUEL, "doshortaction"),
-    ActionHandler(ACTIONS.REPAIR, "dolongaction"),
-    ActionHandler(ACTIONS.REPAIRBOAT, "dolongaction"),
+    ActionHandler(ACTIONS.REPAIR, "doshortaction"),
+    ActionHandler(ACTIONS.REPAIRBOAT, "doshortaction"),
     
     ActionHandler(ACTIONS.READ, "book"),
     ActionHandler(ACTIONS.READMAP, "map"),
@@ -109,15 +109,15 @@ local actionhandlers =
     ActionHandler(ACTIONS.MAKEBALLOON, "makeballoon"),
     ActionHandler(ACTIONS.DEPLOY, "doshortaction"),
     ActionHandler(ACTIONS.DEPLOY_AT_RANGE, "doshortaction"),    
-    ActionHandler(ACTIONS.LAUNCH, "dolongaction"),
-    ActionHandler(ACTIONS.RETRIEVE, "dolongaction"),
+    ActionHandler(ACTIONS.LAUNCH, "doshortaction"),
+    ActionHandler(ACTIONS.RETRIEVE, "doshortaction"),
     ActionHandler(ACTIONS.STORE, "doshortaction"),
     ActionHandler(ACTIONS.STORE_HALF, "doshortaction"),
     ActionHandler(ACTIONS.DROP, "doshortaction"),
     ActionHandler(ACTIONS.DROP_HALF, "doshortaction"),
     --ActionHandler(ACTIONS.SPLITSTACK, "doshortaction"),
     ActionHandler(ACTIONS.MURDER, "dolongaction"),
-    ActionHandler(ACTIONS.UPGRADE, "dolongaction"),
+    ActionHandler(ACTIONS.UPGRADE, "doshortaction"),
 
     -------------------------------------
     ActionHandler(ACTIONS.MOUNT, "jumponboatstart"),
@@ -131,7 +131,7 @@ local actionhandlers =
                 if action.target.components.activatable.quickaction then
                     return "doshortaction"
                 else
-                    return "dolongaction"
+                    return "doshortaction"
                 end
             end
         end),
@@ -141,7 +141,7 @@ local actionhandlers =
                 if action.target.components.pickable.quickpick then
                     return "doshortaction"
                 else
-                    return "dolongaction"
+                    return "doshortaction"
                 end
             end
         end),
@@ -159,22 +159,22 @@ local actionhandlers =
 		
 		end),
 
-    ActionHandler(ACTIONS.TAKEITEM, "dolongaction" ),
+    ActionHandler(ACTIONS.TAKEITEM, "doshortaction" ),
     
     ActionHandler(ACTIONS.BUILD, 
         function(inst, action)
             if not inst.sg:HasStateTag("busy") then
-                return "dolongaction"
+                return "doshortaction"
             end
         end),
     ActionHandler(ACTIONS.SHAVE, "shave"),
-    ActionHandler(ACTIONS.COOK, "dolongaction"),
+    ActionHandler(ACTIONS.COOK, "doshortaction"),
     
     ActionHandler(ACTIONS.PICKUP,
         function(inst, action)
             if action.target.components.inventoryitem then
                 if action.target.components.inventoryitem.longpickup then
-                    return "dolongaction"
+                    return "doshortaction"
                 end
             end
             return "doshortaction"
@@ -183,11 +183,11 @@ local actionhandlers =
     ActionHandler(ACTIONS.CHECKTRAP, "doshortaction"),
     ActionHandler(ACTIONS.RUMMAGE, "doshortaction"),
     ActionHandler(ACTIONS.BAIT, "doshortaction"),
-    ActionHandler(ACTIONS.HEAL, "dolongaction"),
+    ActionHandler(ACTIONS.HEAL, "doshortaction"),
     ActionHandler(ACTIONS.CUREPOISON, "curepoison"),
-    ActionHandler(ACTIONS.SEW, "dolongaction"),
-    ActionHandler(ACTIONS.TEACH, "dolongaction"),
-    ActionHandler(ACTIONS.RESETMINE, "dolongaction"),
+    ActionHandler(ACTIONS.SEW, "doshortaction"),
+    ActionHandler(ACTIONS.TEACH, "doshortaction"),
+    ActionHandler(ACTIONS.RESETMINE, "doshortaction"),
     ActionHandler(ACTIONS.EAT, 
         function(inst, action)
             if inst.sg:HasStateTag("busy") then
@@ -209,7 +209,7 @@ local actionhandlers =
         end),
     ActionHandler(ACTIONS.GIVE, "give"),
     ActionHandler(ACTIONS.PLANT, "doshortaction"),
-    ActionHandler(ACTIONS.HARVEST, "dolongaction"),
+    ActionHandler(ACTIONS.HARVEST, "doshortaction"),
     ActionHandler(ACTIONS.PLAY, function(inst, action)
         if action.invobject then
             if action.invobject:HasTag("flute") then
@@ -233,8 +233,8 @@ local actionhandlers =
     ActionHandler(ACTIONS.PEER, "peertelescope"),
     ActionHandler(ACTIONS.BLINK, "quicktele"),
     ActionHandler(ACTIONS.COMBINESTACK, "doshortaction"),
-    ActionHandler(ACTIONS.BURY, "dolongaction"),
-    ActionHandler(ACTIONS.FEED, "dolongaction"),
+    ActionHandler(ACTIONS.BURY, "doshortaction"),
+    ActionHandler(ACTIONS.FEED, "doshortaction"),
     ActionHandler(ACTIONS.STICK, "doshortaction"),
     ActionHandler(ACTIONS.THROW, "throw"),
 }
