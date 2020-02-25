@@ -29,7 +29,7 @@ SetSharedLootTable( 'ox',
 	{'meat',            1.00},
 	{'meat',            1.00},
 	{'meat',            1.00},
-	{'ox_horn',         0.33},
+	{'ox_horn',         1.00},
 })
 
 local sounds =

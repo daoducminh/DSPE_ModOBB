@@ -1267,7 +1267,7 @@ function MakeHat(name)
 		local inst = simple()
 
 		inst:AddComponent("waterproofer")
-		inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALLMED)
+		inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_ABSOLUTE)
 		
 		inst:AddComponent("armor")
 		inst.components.armor:InitCondition(TUNING.ARMOR_OXHAT, TUNING.ARMOR_OXHAT_ABSORPTION)

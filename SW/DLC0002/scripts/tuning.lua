@@ -941,8 +941,8 @@ function Tune(overrides)
 	    ARMOR_FOOTBALLHAT = wilson_health*500,
 		ARMOR_FOOTBALLHAT_ABSORPTION = 1,
 
-	    ARMOR_OXHAT = wilson_health*4,
-		ARMOR_OXHAT_ABSORPTION = .85,
+	    ARMOR_OXHAT = wilson_health*5000,
+		ARMOR_OXHAT_ABSORPTION = 1,
 
 		ARMORDRAGONFLY = wilson_health * 9,
 		ARMORDRAGONFLY_ABSORPTION = 0.7,
@@ -1590,7 +1590,7 @@ function Tune(overrides)
 	    PRIMEAPE_THROW_COOLDOWN = seg_time * 2,
 		PRIMEAPE_GOHOME_DELAY = seg_time * 9,
 
-	    MONKEYBALL_USES = 10,
+	    MONKEYBALL_USES = 1000,
 	    MONKEYBALL_PASS_TO_PLAYER_CHANCE = 0.5,
 
 	    OX_HEALTH = 500,
@@ -1956,9 +1956,9 @@ function Tune(overrides)
 	    WHALEHUNT_SPAWN_DIST = 40,
 	    WHALEHUNT_COOLDOWN = total_day_time*1.2,
 	    WHALEHUNT_COOLDOWNDEVIATION = total_day_time*.3,
-	    WHALEHUNT_MIN_TRACKS = 5,
-	    WHALEHUNT_MAX_TRACKS = 7,
-	    WHALEHUNT_RESET_TIME = 5,
+	    WHALEHUNT_MIN_TRACKS = 2,
+	    WHALEHUNT_MAX_TRACKS = 4,
+	    WHALEHUNT_RESET_TIME = 10,
 
 	    WHALEHUNT_TRACK_ANGLE_DEVIATION = 160,
 	    MIN_WHALEHUNT_DISTANCE = 300, -- you can't find a new beast without being at least this far from the last one
@@ -1991,12 +1991,12 @@ function Tune(overrides)
 	    SNAKE_ATTACK_PERIOD = 3,
 	    SNAKE_POISON_CHANCE = 0.25,
 	    SNAKE_POISON_START_DAY = 3, -- the day that poison snakes have a chance to show up
-	    SNAKEDEN_REGEN_TIME = 3*seg_time,
+	    SNAKEDEN_REGEN_TIME = 1*seg_time,
 		SNAKEDEN_RELEASE_TIME = 5,
-	    SNAKE_JUNGLETREE_CHANCE = 0.5, -- chance of a normal snake
-	    SNAKE_JUNGLETREE_POISON_CHANCE = 0.25, -- chance of a poison snake
-	    SNAKE_JUNGLETREE_AMOUNT_TALL = 2, -- num of times to try and spawn a snake from a tall tree
-	    SNAKE_JUNGLETREE_AMOUNT_MED = 1, -- num of times to try and spawn a snake from a normal tree
+	    SNAKE_JUNGLETREE_CHANCE = 1, -- chance of a normal snake
+	    SNAKE_JUNGLETREE_POISON_CHANCE = 1, -- chance of a poison snake
+	    SNAKE_JUNGLETREE_AMOUNT_TALL = 3, -- num of times to try and spawn a snake from a tall tree
+	    SNAKE_JUNGLETREE_AMOUNT_MED = 2, -- num of times to try and spawn a snake from a normal tree
 	    SNAKE_JUNGLETREE_AMOUNT_SMALL = 1, -- num of times to try and spawn a snake from a small tree
 	    SNAKEDEN_MAX_SNAKES = 3,
         SNAKEDEN_CHECK_DIST = 20,
