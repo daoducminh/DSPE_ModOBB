@@ -116,7 +116,7 @@ local actionhandlers =
     ActionHandler(ACTIONS.DROP, "doshortaction"),
     ActionHandler(ACTIONS.DROP_HALF, "doshortaction"),
     --ActionHandler(ACTIONS.SPLITSTACK, "doshortaction"),
-    ActionHandler(ACTIONS.MURDER, "dolongaction"),
+    ActionHandler(ACTIONS.MURDER, "doshortaction"),
     ActionHandler(ACTIONS.UPGRADE, "doshortaction"),
 
     -------------------------------------

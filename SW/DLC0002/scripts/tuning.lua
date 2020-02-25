@@ -63,18 +63,18 @@ function Tune(overrides)
 	    WILSON_SANITY = 200,
 	    WILLOW_SANITY = 120,
 
-	    HAMMER_LOOT_PERCENT = 2,
-	    BURNT_HAMMER_LOOT_PERCENT = .25,
+	    HAMMER_LOOT_PERCENT = 10,
+	    BURNT_HAMMER_LOOT_PERCENT = 5,
 	    AXE_USES = 100,
-	    HAMMER_USES = 75,
+	    HAMMER_USES = 200,
 	    SHOVEL_USES = 100,
 	    PITCHFORK_USES = 25,
 	    PICKAXE_USES = 100,
-	    BUGNET_USES = 10,
+	    BUGNET_USES = 1000,
 	    SPEAR_USES = 1000,
 	    WATHGRITHR_SPEAR_USES = 1000,
 	    SPIKE_USES = 100,
-	    FISHINGROD_USES = 9,
+	    FISHINGROD_USES = 1000,
 	    FISHINGROD_MIN_WAIT_TIME = 1,
 	    FISHINGROD_MAX_WAIT_TIME = 2,
 	    TRAP_USES = 8,
@@ -802,8 +802,8 @@ function Tune(overrides)
 
 
 
-	    FISHING_CATCH_CHANCE = 0.4,
-	    FISHING_LOSEROD_CHANCE = 0.4,
+	    FISHING_CATCH_CHANCE = 1,
+	    FISHING_LOSEROD_CHANCE = 0,
 
 		WET_FUEL_PENALTY = 0.75,
 
@@ -899,7 +899,7 @@ function Tune(overrides)
 	    FLOWER_CAVE_REGROW_TIME = total_day_time*3,
 	    LICHEN_REGROW_TIME = total_day_time*5,
 
-	    BERRY_REGROW_TIME = total_day_time*3,
+	    BERRY_REGROW_TIME = total_day_time*0.5,
 	    BERRY_REGROW_INCREASE = total_day_time*.5,
 	    BERRY_REGROW_VARIANCE = total_day_time*2,
 	    BERRYBUSH_CYCLES = 3,
@@ -1369,8 +1369,8 @@ function Tune(overrides)
 		WX78_MAX_MOISTURE_DAMAGE = -.5,
 		WX78_MOISTURE_DRYING_DAMAGE = -.3,
 
-		WALANI_HEALTH = 1200,
-		WALANI_SANITY = 2000,
+		WALANI_HEALTH = 3000,
+		WALANI_SANITY = 200,
 		WALANI_HUNGER = 2000,
 		WALANI_SANITY_RATE_MODIFIER = -0.1,
 		WALANI_HUNGER_RATE_MODIFIER = 0.2,
@@ -1727,8 +1727,8 @@ function Tune(overrides)
 	    MACHETE_DAMAGE = wilson_attack* .88,
 	    MACHETE_USES = 1000,
 
-	    CUTLASS_DAMAGE = wilson_attack*2,
-	    CUTLASS_BONUS_DAMAGE = wilson_attack*1,
+	    CUTLASS_DAMAGE = wilson_attack*50,
+	    CUTLASS_BONUS_DAMAGE = wilson_attack*10,
 	    CUTLASS_USES = 1500,
 
 	    BAMBOO_HACKS = 1,
@@ -1759,45 +1759,45 @@ function Tune(overrides)
 	    ROWBOAT_PERISHTIME = total_day_time*3,
 	    ROWBOAT_SANITY_DRAIN = 0,-- -0.08,
 	    ROWBOAT_SPEED = 3,
-	    ROWBOAT_LEAKING_HEALTH = 40,
+	    ROWBOAT_LEAKING_HEALTH = 1,
 
 	    RAFT_HEALTH = 1500,
 	    RAFT_PERISHTIME = total_day_time*2,
 	    RAFT_SANITY_DRAIN = 0,-- -0.12,
 	    RAFT_SPEED = 2,
 	    RAFT_HITMOISTURERATE = 1.25,
-	    RAFT_LEAKING_HEALTH = 40,
+	    RAFT_LEAKING_HEALTH = 1,
 
 	    LOGRAFT_HEALTH = 1500,
 	    LOGRAFT_PERISHTIME = total_day_time*2,
 	    LOGRAFT_SANITY_DRAIN = 0,-- -0.12,
 	    LOGRAFT_SPEED = 2,
-	    LOGRAFT_LEAKING_HEALTH = 40,
+	    LOGRAFT_LEAKING_HEALTH = 1,
 
 	    CARGOBOAT_HEALTH = 3000,
 	    CARGOBOAT_PERISHTIME = total_day_time*3,
 	    CARGOBOAT_SANITY_DRAIN = 0,-- -0.08,
 	    CARGOBOAT_SPEED = 3,
-	    CARGOBOAT_LEAKING_HEALTH = 40,
+	    CARGOBOAT_LEAKING_HEALTH = 1,
 
 	    ARMOUREDBOAT_HEALTH = 5000,
 	    ARMOUREDBOAT_PERISHTIME = total_day_time*4,
 	    ARMOUREDBOAT_SANITY_DRAIN = 0,-- -0.08,
 	    ARMOUREDBOAT_SPEED = 3,
-	    ARMOUREDBOAT_LEAKING_HEALTH = 40,
+	    ARMOUREDBOAT_LEAKING_HEALTH = 1,
 	    ARMOUREDBOAT_HIT_IMMUNITY = 3,
 
 		ENCRUSTEDBOAT_HEALTH = 8000,
 	    ENCRUSTEDBOAT_PERISHTIME = total_day_time*5,
 	    ENCRUSTEDBOAT_SANITY_DRAIN = 0,
 	    ENCRUSTEDBOAT_SPEED = 3,
-	    ENCRUSTEDBOAT_LEAKING_HEALTH = 40,
+	    ENCRUSTEDBOAT_LEAKING_HEALTH = 1,
 	    ENCRUSTEDBOAT_HIT_IMMUNITY = 4,
 
 	    WOODLEGSBOAT_SPEED = 2,
 	    WOODLEGSBOAT_HEALTH = 5000,
 	    WOODLEGSBOAT_DAMAGESCALE = 0.5,
-	    WOODLEGSBOAT_LEAKING_HEALTH = 40,
+	    WOODLEGSBOAT_LEAKING_HEALTH = 1,
 	    WOODLEGSBOAT_HIT_IMMUNITY = 2,
 
 	    BOAT_TORCH_LIGHTTIME = night_time*1.75,
@@ -2231,9 +2231,9 @@ function Tune(overrides)
 
 	    ICEMAKER_SPAWN_TIME = seg_time,
 	    ICEMAKER_FUEL_MAX = seg_time * 3,
-	    CORAL_MINE = 9,
+	    CORAL_MINE = 1,
 
-	    CORAL_BRAIN_REGROW = total_day_time * 20,
+	    CORAL_BRAIN_REGROW = total_day_time * 1,
 
 	    SHARX_HEALTH = 150,
 	    SHARX_DAMAGE = 20,
@@ -2270,13 +2270,13 @@ function Tune(overrides)
 		BOATCANNON_BUILDINGDAMAGE = 100,
 	    BOATCANNON_AMMO_COUNT = 100,
 
-	    WINDBREAKER_PERISHTIME = total_day_time*10, --was 15
+	    WINDBREAKER_PERISHTIME = total_day_time*500, --was 15
 	    AERODYNAMICHAT_PERISHTIME = 48*seg_time, --was 8
 	    AERODYNAMICHAT_SPEED_MULT = 0.25,
 
-	    CAPTAINHAT_PERISHTIME = total_day_time*2, --I boosted pirate and captain from 10 segments
-	    PIRATEHAT_PERISHTIME = total_day_time*2,
-	    GASHAT_PERISHTIME = 80*seg_time,  --was 10
+	    CAPTAINHAT_PERISHTIME = total_day_time*500, --I boosted pirate and captain from 10 segments
+	    PIRATEHAT_PERISHTIME = total_day_time*500,
+	    GASHAT_PERISHTIME = total_day_time*500,  --was 10
 
 	    SWORDFISH_WALK_SPEED = 5,
 	    SWORDFISH_RUN_SPEED = 8,
@@ -2297,8 +2297,8 @@ function Tune(overrides)
 	    SHARK_HAT_PERISHTIME = total_day_time*9,
 
 	 	DO_SEA_DAMAGE_TO_BOAT = true,
-	 	BOAT_REPAIR_KIT_HEALING = 100,
-	 	BOAT_REPAIR_KIT_USES = 3,
+	 	BOAT_REPAIR_KIT_HEALING = 5000,
+	 	BOAT_REPAIR_KIT_USES = 1000,
 
 	 	APPEASEMENT_TINY = 4,
 	 	APPEASEMENT_SMALL = 8,
@@ -2325,15 +2325,15 @@ function Tune(overrides)
 	    LAVAPOOL_FUEL_MAX = (night_time+dusk_time),
 	    LAVAPOOL_FUEL_START = (night_time+dusk_time)*.75,
 
-	    DOUBLE_UMBRELLA_PERISHTIME = total_day_time*12,
+	    DOUBLE_UMBRELLA_PERISHTIME = total_day_time*120,
 
 	    PACKIM_MAX_HUNGER = 150,
-	    PACKIM_TRANSFORM_HUNGER = 120,
+	    PACKIM_TRANSFORM_HUNGER = 20,
 	    PACKIM_HUNGER_DRAIN = 0.1,
 	    PACKIM_FIRE_DELAY_MIN = 5,
 	    PACKIM_FIRE_DELAY_MAX = 10,
 
-	    SEAWEED_REGROW_TIME = total_day_time*3,
+	    SEAWEED_REGROW_TIME = total_day_time*1,
 	    SEAWEED_REGROW_VARIANCE = total_day_time*2,
 
 	    VOLCANORIM_ACTIVE_HEAT = 70,
@@ -2432,8 +2432,8 @@ function Tune(overrides)
 		MAX_FLOOD_LEVEL = 15,
 		FLOOD_FREQUENCY = 0.005,
 
-		SAILSTICK_PERISHTIME = total_day_time * 10,
-		WIND_CONCH_USES = 10,
+		SAILSTICK_PERISHTIME = total_day_time * 100,
+		WIND_CONCH_USES = 1000,
 
 		OBSIDIAN_TOOL_MAXCHARGES = 75,
 		OBSIDIAN_TOOL_MAXHEAT = 60,

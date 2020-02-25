@@ -78,9 +78,9 @@ local function makefish(bank_and_build, rodbuild, cooked_prod)
 
         MakeInventoryFloatable(inst, "idle_water", "idle")
 
-		inst.components.edible.healthvalue = TUNING.HEALING_TINY
-		inst.components.edible.hungervalue = TUNING.CALORIES_SMALL
-		inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
+		inst.components.edible.healthvalue = TUNING.HEALING_SUPERHUGE
+		inst.components.edible.hungervalue = TUNING.CALORIES_SUPERHUGE
+		inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
         
         inst:AddComponent("cookable")
         inst.components.cookable.product = cooked_prod
@@ -103,9 +103,9 @@ local function makefish(bank_and_build, rodbuild, cooked_prod)
         MakeInventoryFloatable(inst, "idle_cooked_water", "cooked")
         
         inst.components.edible.foodstate = "COOKED"
-		inst.components.edible.healthvalue = TUNING.HEALING_TINY
-		inst.components.edible.hungervalue = TUNING.CALORIES_SMALL
-		inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+		inst.components.edible.healthvalue = TUNING.HEALING_SUPERHUGE
+		inst.components.edible.hungervalue = TUNING.CALORIES_SUPERHUGE
+		inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
 
         return inst
     end

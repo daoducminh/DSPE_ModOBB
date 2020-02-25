@@ -58,7 +58,7 @@ local goodspawns =
 
 	-- Best Slot Loot List
 	slot_goldy = 1,
-	slot_10dubloons = 1,
+	slot_10dubloons = 100,
 	slot_honeypot = 1,
 	slot_warrior1 = 1,
 	slot_warrior2 = 1,
@@ -66,8 +66,8 @@ local goodspawns =
 	slot_warrior4 = 1,
 	slot_scientist = 1,
 	slot_walker = 1,
-	slot_gemmy = 1,
-	slot_bestgem = 1,
+	slot_gemmy = 100,
+	slot_bestgem = 100,
 	slot_lifegiver = 1,
 	slot_chilledamulet = 1,
 	slot_icestaff = 1,
@@ -78,7 +78,7 @@ local goodspawns =
 	slot_sleepdart = 1,
 	slot_blowdart = 1,
 	slot_speargun = 1,
-	slot_coconades = 1,
+	slot_coconades = 100,
 	slot_obsidian = 1,
 	slot_thuleciteclub = 1,
 	slot_ultimatewarrior = 1,
@@ -86,7 +86,7 @@ local goodspawns =
 	staydry = 1,
 	cooloff = 1,
 	birders = 1,
-	gears =1,
+	gears =100,
 	slot_seafoodsurprise = 1,
 	slot_fisherman = 1,
 	slot_camper = 1,
@@ -99,7 +99,7 @@ local goodspawns =
 local okspawns =
 {
 	-- OK slot List - Food and Resrouces 
-	slot_anotherspin = 5,
+	slot_anotherspin = 500,
 	firestarter = 5,
 	geologist = 5,
 	cutgrassbunch = 5,
@@ -146,7 +146,8 @@ local badspawns =
 
 	-- Old
 	--nothing = 100,
-	--trinket = 100,
+	trinket = 100,
+	gears =100,
 }
 
 -- weighted_random_choice for bad, ok, good prize lists 

@@ -104,9 +104,9 @@ local function makefish_med(bank, build, inventoryimage, dryablesymbol)
 		inst.AnimState:PlayAnimation("dead")
 
 
-		inst.components.edible.healthvalue = TUNING.HEALING_TINY
-		inst.components.edible.hungervalue = TUNING.CALORIES_MED
-		inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
+		inst.components.edible.healthvalue = TUNING.HEALING_SUPERHUGE
+		inst.components.edible.hungervalue = TUNING.CALORIES_SUPERHUGE
+		inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
 		
 		inst:AddComponent("cookable")
 		inst.components.cookable.product = "fish_med_cooked"
@@ -208,14 +208,14 @@ local function cookedfn()
 	inst.components.edible.ismeat = true
 	inst.components.edible.foodtype = "MEAT"
 	inst.components.edible.foodstate = "COOKED"
-	inst.components.edible.healthvalue = TUNING.HEALING_MED
-	inst.components.edible.hungervalue = TUNING.CALORIES_MED
+	inst.components.edible.healthvalue = TUNING.HEALING_SUPERHUGE
+	inst.components.edible.hungervalue = TUNING.CALORIES_SUPERHUGE
 	
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
 	inst:AddComponent("perishable")
-	inst.components.perishable:SetPerishTime(TUNING.PERISH_FAST)
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERSLOW)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "spoiled_food" 
 	
@@ -274,8 +274,8 @@ local function fish_raw_fn()
 	inst:AddComponent("appeasement")
 	inst.components.appeasement.appeasementvalue = TUNING.APPEASEMENT_SMALL
 
-	inst.components.edible.healthvalue = TUNING.HEALING_TINY
-	inst.components.edible.hungervalue = TUNING.CALORIES_MED
+	inst.components.edible.healthvalue = TUNING.HEALING_SUPERHUGE
+	inst.components.edible.hungervalue = TUNING.CALORIES_SUPERHUGE
 	
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "fish_med_cooked"
@@ -329,7 +329,7 @@ local function fish_raw_small_fn()
 	inst.data = {}
 
 	inst:AddComponent("appeasement")
-	inst.components.appeasement.appeasementvalue = TUNING.APPEASEMENT_SMALL
+	inst.components.appeasement.appeasementvalue = TUNING.APPEASEMENT_HUGE
 
 	inst.components.edible.healthvalue = TUNING.HEALING_TINY
 	inst.components.edible.hungervalue = TUNING.CALORIES_SMALL
