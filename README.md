@@ -2,8 +2,8 @@
 
 ## Installation
 - Cloning this project.
-- Downloading obb file
-> This project is based on `Don't Starve PE 1.14` for RoG, and `Don't Starve Shipwrecked 1.26` for SW, other versions aren't guaranteed
+- Downloading obb file.
+> This project is based on `Don't Starve PE 1.17` for RoG, and `Don't Starve Shipwrecked 1.27` for SW, other versions aren't guaranteed.
 
 ## Getting Started
 

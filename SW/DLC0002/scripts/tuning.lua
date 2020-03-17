@@ -63,8 +63,8 @@ function Tune(overrides)
 	    WILSON_SANITY = 200,
 	    WILLOW_SANITY = 120,
 
-	    HAMMER_LOOT_PERCENT = 10,
-	    BURNT_HAMMER_LOOT_PERCENT = 5,
+	    HAMMER_LOOT_PERCENT = 5,
+	    BURNT_HAMMER_LOOT_PERCENT = 2,
 	    AXE_USES = 100,
 	    HAMMER_USES = 200,
 	    SHOVEL_USES = 100,
@@ -1802,7 +1802,7 @@ function Tune(overrides)
 
 	    BOAT_TORCH_LIGHTTIME = night_time*1.75,
 	    BOAT_LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
-	    BOTTLE_LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
+	    BOTTLE_LANTERN_LIGHTTIME = total_day_time*200,
 
 	    SAIL_SPEED_MULT = 1,
 	    SAIL_ACCEL_MULT = 2,
@@ -2271,8 +2271,8 @@ function Tune(overrides)
 	    BOATCANNON_AMMO_COUNT = 100,
 
 	    WINDBREAKER_PERISHTIME = total_day_time*500, --was 15
-	    AERODYNAMICHAT_PERISHTIME = 48*seg_time, --was 8
-	    AERODYNAMICHAT_SPEED_MULT = 0.25,
+	    AERODYNAMICHAT_PERISHTIME = total_day_time*500, --was 8
+	    AERODYNAMICHAT_SPEED_MULT = 2,
 
 	    CAPTAINHAT_PERISHTIME = total_day_time*500, --I boosted pirate and captain from 10 segments
 	    PIRATEHAT_PERISHTIME = total_day_time*500,
@@ -2325,7 +2325,7 @@ function Tune(overrides)
 	    LAVAPOOL_FUEL_MAX = (night_time+dusk_time),
 	    LAVAPOOL_FUEL_START = (night_time+dusk_time)*.75,
 
-	    DOUBLE_UMBRELLA_PERISHTIME = total_day_time*120,
+	    DOUBLE_UMBRELLA_PERISHTIME = total_day_time*500,
 
 	    PACKIM_MAX_HUNGER = 150,
 	    PACKIM_TRANSFORM_HUNGER = 20,
@@ -2460,8 +2460,8 @@ function Tune(overrides)
 
         OX_FLUTE_USES = 5,
 
-        TAR_EXTRACTOR_MAX_FUEL_TIME = total_day_time*2,
-        SEA_YARD_MAX_FUEL_TIME = seg_time*6,
+        TAR_EXTRACTOR_MAX_FUEL_TIME = total_day_time*200,
+        SEA_YARD_MAX_FUEL_TIME = total_day_time*200,
 
         TAR_TRAP_TIME = seg_time,
 
