@@ -1801,7 +1801,7 @@ function Tune(overrides)
 	    WOODLEGSBOAT_HIT_IMMUNITY = 2,
 
 	    BOAT_TORCH_LIGHTTIME = night_time*1.75,
-	    BOAT_LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
+	    BOAT_LANTERN_LIGHTTIME = total_day_time*500,
 	    BOTTLE_LANTERN_LIGHTTIME = total_day_time*200,
 
 	    SAIL_SPEED_MULT = 1,
