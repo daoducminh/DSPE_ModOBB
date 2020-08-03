@@ -54,15 +54,15 @@ function Tune(overrides)
 	    WX78_MIN_HUNGER = 1000,
 	    WX78_MIN_SANITY = 1000,
 
-	    WX78_MAX_HEALTH = 4000,
-	    WX78_MAX_HUNGER = 2000,
-	    WX78_MAX_SANITY = 3000,
+	    WX78_MAX_HEALTH = 10000,
+	    WX78_MAX_HUNGER = 10000,
+	    WX78_MAX_SANITY = 10000,
 	    
 	    WILSON_SANITY = 200,
 	    WILLOW_SANITY = 120,
 	    
-	    HAMMER_LOOT_PERCENT = 1,
-	    BURNT_HAMMER_LOOT_PERCENT = .25,
+	    HAMMER_LOOT_PERCENT = 5,
+	    BURNT_HAMMER_LOOT_PERCENT = 3,
 	    AXE_USES = 100,
 	    HAMMER_USES = 75,
 	    SHOVEL_USES = 100,
@@ -74,8 +74,8 @@ function Tune(overrides)
 	    SPIKE_USES = 100,
 	    FISHINGROD_USES = 9,
 	    TRAP_USES = 8,
-	    BOOMERANG_USES = 10,
-	    BOOMERANG_DISTANCE = 12,
+	    BOOMERANG_USES = 1000,
+	    BOOMERANG_DISTANCE = 24,
 	    NIGHTSWORD_USES = 100,
 	    ICESTAFF_USES = 1000,
 	    FIRESTAFF_USES = 1000,
@@ -121,17 +121,17 @@ function Tune(overrides)
 	    BATBAT_DAMAGE = wilson_attack * 1.25,
 	    BATBAT_DRAIN = wilson_attack * 0.2,
 		-------
-	    SPIKE_DAMAGE = wilson_attack*1.5,
+	    SPIKE_DAMAGE = wilson_attack*10,
 		HAMBAT_DAMAGE = wilson_attack*1.75,
 		HAMBAT_MIN_DAMAGE_MODIFIER = .5,
 	    SPEAR_DAMAGE = wilson_attack,
 	    WATHGRITHR_SPEAR_DAMAGE = wilson_attack * 10,
-	    AXE_DAMAGE = wilson_attack*.8,
-	    PICK_DAMAGE = wilson_attack*.8,
-	    BOOMERANG_DAMAGE = wilson_attack*.8,
-	    TORCH_DAMAGE = wilson_attack*.5,
-	    HAMMER_DAMAGE = wilson_attack*.5,
-	    SHOVEL_DAMAGE = wilson_attack*.5,
+	    AXE_DAMAGE = wilson_attack*2,
+	    PICK_DAMAGE = wilson_attack*2,
+	    BOOMERANG_DAMAGE = wilson_attack*5,
+	    TORCH_DAMAGE = wilson_attack*2,
+	    HAMMER_DAMAGE = wilson_attack*2,
+	    SHOVEL_DAMAGE = wilson_attack*2,
 	    PITCHFORK_DAMAGE = wilson_attack*.5,
 	    BUGNET_DAMAGE = wilson_attack*.125,
 	    FISHINGROD_DAMAGE = wilson_attack*.125,
@@ -626,8 +626,8 @@ function Tune(overrides)
 			ALCHEMYMACHINE =
 			{
 				SCIENCE = 2,
-				MAGIC = 1,
-				ANCIENT = 0,
+				MAGIC = 3,
+				ANCIENT = 4,
 			},
 
 			PRESTIHATITATOR =
@@ -778,14 +778,14 @@ function Tune(overrides)
         ROCKLIGHT_FUEL_MAX = (night_time+dusk_time)*1.5,
 	
 		FIREPIT_RAIN_RATE = 2,
-	    FIREPIT_FUEL_MAX = (night_time+dusk_time)*2,
+	    FIREPIT_FUEL_MAX = (night_time+dusk_time)*20,
 	    FIREPIT_FUEL_START = night_time+dusk_time,
-	    FIREPIT_BONUS_MULT = 2,
+	    FIREPIT_BONUS_MULT = 20,
 
 	    COLDFIREPIT_RAIN_RATE = 2,
-	    COLDFIREPIT_FUEL_MAX = (night_time+dusk_time)*2,
+	    COLDFIREPIT_FUEL_MAX = (night_time+dusk_time)*20,
 	    COLDFIREPIT_FUEL_START = night_time+dusk_time,
-	    COLDFIREPIT_BONUS_MULT = 2,
+	    COLDFIREPIT_BONUS_MULT = 20,
 
 	    PIGTORCH_RAIN_RATE = 2,
 	    PIGTORCH_FUEL_MAX = night_time,
@@ -798,21 +798,21 @@ function Tune(overrides)
 
 	    NIGHTSTICK_FUEL = night_time*6,
 
-	    MINERHAT_LIGHTTIME = (night_time+dusk_time)*2.6,
-	    LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
-	    SPIDERHAT_PERISHTIME = 4*seg_time,
+	    MINERHAT_LIGHTTIME = (night_time+dusk_time)*26,
+	    LANTERN_LIGHTTIME = (night_time+dusk_time)*26,
+	    SPIDERHAT_PERISHTIME = 40*seg_time,
 	    SPIDERHAT_RANGE = 12,
-	    ONEMANBAND_PERISHTIME = 6*seg_time,
+	    ONEMANBAND_PERISHTIME = 60*seg_time,
 	    ONEMANBAND_RANGE = 12,
 	    
 	    GRASS_UMBRELLA_PERISHTIME = 2*total_day_time*perish_warp,
-	    UMBRELLA_PERISHTIME = total_day_time*6,
-	    EYEBRELLA_PERISHTIME = total_day_time*9,
+	    UMBRELLA_PERISHTIME = total_day_time*60,
+	    EYEBRELLA_PERISHTIME = total_day_time*90,
 
 		STRAWHAT_PERISHTIME = total_day_time*5,
 		EARMUFF_PERISHTIME = total_day_time*5,
-		WINTERHAT_PERISHTIME = total_day_time*10,
-		BEEFALOHAT_PERISHTIME = total_day_time*10,
+		WINTERHAT_PERISHTIME = total_day_time*100,
+		BEEFALOHAT_PERISHTIME = total_day_time*100,
 		
 		TRUNKVEST_PERISHTIME = total_day_time*15,
 		REFLECTIVEVEST_PERISHTIME = total_day_time*8,
@@ -822,17 +822,17 @@ function Tune(overrides)
 		BEARGERVEST_PERISHTIME = total_day_time*7,
 		RAINCOAT_PERISHTIME = total_day_time*10,
 
-		WALRUSHAT_PERISHTIME = total_day_time*25,
-		FEATHERHAT_PERISHTIME = total_day_time*8,
-		TOPHAT_PERISHTIME = total_day_time*8,
+		WALRUSHAT_PERISHTIME = total_day_time*250,
+		FEATHERHAT_PERISHTIME = total_day_time*80,
+		TOPHAT_PERISHTIME = total_day_time*80,
 
-		ICEHAT_PERISHTIME = total_day_time*4,
-		MOLEHAT_PERISHTIME = total_day_time*1.5,
-		RAINHAT_PERISHTIME = total_day_time*10,
-		CATCOONHAT_PERISHTIME = total_day_time*10,
+		ICEHAT_PERISHTIME = total_day_time*40,
+		MOLEHAT_PERISHTIME = total_day_time*15,
+		RAINHAT_PERISHTIME = total_day_time*100,
+		CATCOONHAT_PERISHTIME = total_day_time*100,
 	    
-	    GRASS_REGROW_TIME = total_day_time*3,
-	    SAPLING_REGROW_TIME = total_day_time*4,
+	    GRASS_REGROW_TIME = total_day_time*0.5,
+	    SAPLING_REGROW_TIME = total_day_time*0.5,
 	    MARSHBUSH_REGROW_TIME = total_day_time*4,
 	    CACTUS_REGROW_TIME = total_day_time*4,
 	    FLOWER_CAVE_REGROW_TIME = total_day_time*3,
@@ -909,9 +909,9 @@ function Tune(overrides)
 	    
 	    PANFLUTE_SLEEPTIME = 20,
 	    PANFLUTE_SLEEPRANGE = 15,
-	    PANFLUTE_USES = 10,
+	    PANFLUTE_USES = 100,
 	    HORN_RANGE = 25,
-	    HORN_USES = 10,
+	    HORN_USES = 100,
 	    HORN_EFFECTIVE_TIME = 20,
 	    HORN_MAX_FOLLOWERS = 5,
 	    MANDRAKE_SLEEP_TIME = 10,
@@ -1216,7 +1216,7 @@ function Tune(overrides)
 
 		ROCKY_DAMAGE = 75,	
 		ROCKY_HEALTH = 1500,
-		ROCKY_WALK_SPEED = 2,
+		ROCKY_WALK_SPEED = 4,
 		ROCKY_MAX_SCALE = 1.2,
 		ROCKY_MIN_SCALE = .75,
 		ROCKY_GROW_RATE = (1.2-.75) / (total_day_time*40),
@@ -1309,16 +1309,16 @@ function Tune(overrides)
 		WATHGRITHR_ABSORPTION = 1,
 
 		WEBBER_HEALTH = 1750,
-		WEBBER_SANITY = 100,
+		WEBBER_SANITY = 1000,
 		WEBBER_HUNGER = 1750,
 
 		PYRO_HEALTH = 1750,
-		PYRO_SANITY = 100,
+		PYRO_SANITY = 1000,
 		PYRO_HUNGER = 1750,
 		PYRO_DAPPERNESS_MULT = 1.2,
 
 		WENDY_DAMAGE_MULT = 10,
-		WENDY_SANITY_MULT = 10,
+		WENDY_SANITY_MULT = .75,
 
 		WICKERBOTTOM_SANITY = 2500,
 	    WICKERBOTTOM_STALE_FOOD_HUNGER = .333,
@@ -1397,7 +1397,7 @@ function Tune(overrides)
 		FIRE_DETECTOR_PERIOD = 1,
 		FIRE_DETECTOR_RANGE = 15,
 		FIRESUPPRESSOR_RELOAD_TIME = 3,
-		FIRESUPPRESSOR_MAX_FUEL_TIME = total_day_time*5,
+		FIRESUPPRESSOR_MAX_FUEL_TIME = total_day_time*5000,
 		FIRESUPPRESSOR_EXTINGUISH_HEAT_PERCENT = 0,
 		SMOTHERER_EXTINGUISH_HEAT_PERCENT = .2,
 
@@ -1435,7 +1435,7 @@ function Tune(overrides)
 	    CATCOON_PICKUP_ITEM_CHANCE = .67,
 	    CATCOON_ATTACK_CONNECT_CHANCE = .25,
 
-		FERTILIZER_USES = 10,
+		FERTILIZER_USES = 1000,
 
 		GLOMMERBELL_USES = 1000,
 
