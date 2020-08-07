@@ -19,7 +19,7 @@ function Tune(overrides)
 	local night_time = seg_time * night_segs
 
 	local wilson_attack = 100
-	local wilson_health = 1500
+	local wilson_health = 150
 	local calories_per_day = 75
 
 	local wilson_attack_period = .5
@@ -65,20 +65,20 @@ function Tune(overrides)
 
 	    HAMMER_LOOT_PERCENT = 5,
 	    BURNT_HAMMER_LOOT_PERCENT = 2,
-	    AXE_USES = 100,
+	    AXE_USES = 500,
 	    HAMMER_USES = 200,
-	    SHOVEL_USES = 100,
-	    PITCHFORK_USES = 25,
-	    PICKAXE_USES = 100,
+	    SHOVEL_USES = 500,
+	    PITCHFORK_USES = 200,
+	    PICKAXE_USES = 500,
 	    BUGNET_USES = 1000,
 	    SPEAR_USES = 1000,
 	    WATHGRITHR_SPEAR_USES = 1000,
-	    SPIKE_USES = 100,
+	    SPIKE_USES = 1000,
 	    FISHINGROD_USES = 1000,
 	    FISHINGROD_MIN_WAIT_TIME = 1,
 	    FISHINGROD_MAX_WAIT_TIME = 2,
-	    TRAP_USES = 8,
-	    BOOMERANG_USES = 10,
+	    TRAP_USES = 80,
+	    BOOMERANG_USES = 100,
 	    BOOMERANG_DISTANCE = 12,
 	    NIGHTSWORD_USES = 100,
 	    ICESTAFF_USES = 1000,
@@ -125,14 +125,14 @@ function Tune(overrides)
 	    BATBAT_DAMAGE = wilson_attack * 1.25,
 	    BATBAT_DRAIN = wilson_attack * 0.2,
 		-------
-	    SPIKE_DAMAGE = wilson_attack*1.5,
+	    SPIKE_DAMAGE = wilson_attack*50,
 		HAMBAT_DAMAGE = wilson_attack*1.75,
 		HAMBAT_MIN_DAMAGE_MODIFIER = .5,
 	    SPEAR_DAMAGE = wilson_attack*50,
 	    WATHGRITHR_SPEAR_DAMAGE = wilson_attack * 1.25,
-	    AXE_DAMAGE = wilson_attack*.8,
-	    PICK_DAMAGE = wilson_attack*.8,
-	    BOOMERANG_DAMAGE = wilson_attack*.8,
+	    AXE_DAMAGE = wilson_attack*5,
+	    PICK_DAMAGE = wilson_attack*5,
+	    BOOMERANG_DAMAGE = wilson_attack*10,
 	    TORCH_DAMAGE = wilson_attack*.5,
 	    HAMMER_DAMAGE = wilson_attack*.5,
 	    SHOVEL_DAMAGE = wilson_attack*.5,
@@ -322,8 +322,8 @@ function Tune(overrides)
 	    GHOST_DMG_PLAYER_PERCENT = 1,
 
 	    ABIGAIL_SPEED = 5,
-	    ABIGAIL_HEALTH = wilson_health*4,
-	    ABIGAIL_DAMAGE_PER_SECOND = 20,
+	    ABIGAIL_HEALTH = wilson_health*4000,
+	    ABIGAIL_DAMAGE_PER_SECOND = 200,
 	    ABIGAIL_DMG_PERIOD = 1.5,
 	    ABIGAIL_DMG_PLAYER_PERCENT = 0.25,
 
@@ -625,19 +625,19 @@ function Tune(overrides)
 	    HATCH_UPDATE_PERIOD = 3,
 	    HATCH_CAMPFIRE_RADIUS = 4,
 
-	    CHESTER_HEALTH = wilson_health*3,
+	    CHESTER_HEALTH = wilson_health*300,
 	    CHESTER_RESPAWN_TIME = total_day_time * 1,
-	    CHESTER_HEALTH_REGEN_AMOUNT = (wilson_health*3) * 3/60,
+	    CHESTER_HEALTH_REGEN_AMOUNT = (wilson_health*300) * 3/60,
 	    CHESTER_HEALTH_REGEN_PERIOD = 3,
 
 		PROTOTYPER_TREES = {
 		    SCIENCEMACHINE =
 		    {
-		    	SCIENCE = 1,
-		    	MAGIC = 1,
-		    	ANCIENT = 0,
-		    	OBSIDIAN = 0,
-		    	WATER = 0,
+		    	SCIENCE = 2,
+		    	MAGIC = 3,
+		    	ANCIENT = 4,
+		    	OBSIDIAN = 2,
+		    	WATER = 2,
 			},
 
 			ALCHEMYMACHINE =
@@ -833,16 +833,16 @@ function Tune(overrides)
         ROCKLIGHT_FUEL_MAX = (night_time+dusk_time)*1.5,
 
 		FIREPIT_RAIN_RATE = 2,
-	    FIREPIT_FUEL_MAX = (night_time+dusk_time)*2,
+	    FIREPIT_FUEL_MAX = (night_time+dusk_time)*200,
 	    FIREPIT_FUEL_START = night_time+dusk_time,
-	    FIREPIT_BONUS_MULT = 2,
+	    FIREPIT_BONUS_MULT = 20,
 	    FIREPIT_FLOOD_RATE = 500,
 	    FIREPIT_WIND_RATE = 10,
 
 	    COLDFIREPIT_RAIN_RATE = 2,
-	    COLDFIREPIT_FUEL_MAX = (night_time+dusk_time)*2,
+	    COLDFIREPIT_FUEL_MAX = (night_time+dusk_time)*200,
 	    COLDFIREPIT_FUEL_START = night_time+dusk_time,
-	    COLDFIREPIT_BONUS_MULT = 2,
+	    COLDFIREPIT_BONUS_MULT = 20,
 	    COLDFIREPIT_FLOOD_RATE = 500,
 	    COLDFIREPIT_WIND_RATE = 10,
 
@@ -859,47 +859,47 @@ function Tune(overrides)
 
 	    NIGHTSTICK_FUEL = night_time*6,
 
-	    MINERHAT_LIGHTTIME = (night_time+dusk_time)*2.6,
-	    LANTERN_LIGHTTIME = (night_time+dusk_time)*2.6,
-	    SPIDERHAT_PERISHTIME = 4*seg_time,
+	    MINERHAT_LIGHTTIME = (night_time+dusk_time)*2600,
+	    LANTERN_LIGHTTIME = (night_time+dusk_time)*2600,
+	    SPIDERHAT_PERISHTIME = 400*total_day_time,
 	    SPIDERHAT_RANGE = 12,
 	    ONEMANBAND_PERISHTIME = 6*seg_time,
 	    ONEMANBAND_RANGE = 12,
 
 	    GRASS_UMBRELLA_PERISHTIME = 2*total_day_time*perish_warp,
-	    UMBRELLA_PERISHTIME = total_day_time*6,
-	    EYEBRELLA_PERISHTIME = total_day_time*9,
+	    UMBRELLA_PERISHTIME = total_day_time*6000,
+	    EYEBRELLA_PERISHTIME = total_day_time*9000,
 
 		STRAWHAT_PERISHTIME = total_day_time*5,
 		EARMUFF_PERISHTIME = total_day_time*5,
-		WINTERHAT_PERISHTIME = total_day_time*10,
-		BEEFALOHAT_PERISHTIME = total_day_time*10,
+		WINTERHAT_PERISHTIME = total_day_time*1000,
+		BEEFALOHAT_PERISHTIME = total_day_time*1000,
 
-		TRUNKVEST_PERISHTIME = total_day_time*15,
-		REFLECTIVEVEST_PERISHTIME = total_day_time*8,
+		TRUNKVEST_PERISHTIME = total_day_time*150,
+		REFLECTIVEVEST_PERISHTIME = total_day_time*800,
 		HAWAIIANSHIRT_PERISHTIME = total_day_time*15,
 		SWEATERVEST_PERISHTIME = total_day_time*10,
 		HUNGERBELT_PERISHTIME = total_day_time*8,
-		BEARGERVEST_PERISHTIME = total_day_time*7,
-		RAINCOAT_PERISHTIME = total_day_time*10,
+		BEARGERVEST_PERISHTIME = total_day_time*7000,
+		RAINCOAT_PERISHTIME = total_day_time*1000,
 
 		WALRUSHAT_PERISHTIME = total_day_time*25,
 		FEATHERHAT_PERISHTIME = total_day_time*8,
 		TOPHAT_PERISHTIME = total_day_time*8,
 
 		ICEHAT_PERISHTIME = total_day_time*4,
-		MOLEHAT_PERISHTIME = total_day_time*1.5,
-		RAINHAT_PERISHTIME = total_day_time*10,
+		MOLEHAT_PERISHTIME = total_day_time*150,
+		RAINHAT_PERISHTIME = total_day_time*1000,
 		CATCOONHAT_PERISHTIME = total_day_time*10,
 
-	    GRASS_REGROW_TIME = total_day_time*3,
-	    SAPLING_REGROW_TIME = total_day_time*4,
-	    MARSHBUSH_REGROW_TIME = total_day_time*4,
-	    CACTUS_REGROW_TIME = total_day_time*4,
-	    FLOWER_CAVE_REGROW_TIME = total_day_time*3,
-	    LICHEN_REGROW_TIME = total_day_time*5,
+	    GRASS_REGROW_TIME = seg_time,
+	    SAPLING_REGROW_TIME = seg_time,
+	    MARSHBUSH_REGROW_TIME = seg_time,
+	    CACTUS_REGROW_TIME = seg_time,
+	    FLOWER_CAVE_REGROW_TIME = seg_time,
+	    LICHEN_REGROW_TIME = seg_time,
 
-	    BERRY_REGROW_TIME = total_day_time*0.5,
+	    BERRY_REGROW_TIME = seg_time,
 	    BERRY_REGROW_INCREASE = total_day_time*.5,
 	    BERRY_REGROW_VARIANCE = total_day_time*2,
 	    BERRYBUSH_CYCLES = 3,
@@ -924,49 +924,49 @@ function Tune(overrides)
 	    MAX_RABBIT_HOLE_TRANSITION_TIME = day_time*2,
 
 	    FULL_ABSORPTION = 1,
-	    ARMORGRASS = wilson_health*10,
+	    ARMORGRASS = wilson_health*100,
 		ARMORGRASS_ABSORPTION = 1,
 	    ARMORWOOD = wilson_health*3,
-		ARMORWOOD_ABSORPTION = .8,
+		ARMORWOOD_ABSORPTION = 1,
 		ARMORMARBLE = wilson_health*7,
-		ARMORMARBLE_ABSORPTION = .95,
-		ARMORSNURTLESHELL_ABSORPTION = 0.6,
+		ARMORMARBLE_ABSORPTION = 1,
+		ARMORSNURTLESHELL_ABSORPTION = 1,
 		ARMORSNURTLESHELL = wilson_health*7,
-		ARMORMARBLE_SLOW = -0.3,
-		ARMORRUINS_ABSORPTION = 0.9,
+		ARMORMARBLE_SLOW = 1,
+		ARMORRUINS_ABSORPTION = 1,
 		ARMORRUINS = wilson_health * 12,
-		ARMORSLURPER_ABSORPTION = 0.6,
+		ARMORSLURPER_ABSORPTION = 1,
 		ARMORSLURPER_SLOW_HUNGER = -0.4,
 		ARMORSLURPER = wilson_health * 4,
-	    ARMOR_FOOTBALLHAT = wilson_health*500,
+	    ARMOR_FOOTBALLHAT = wilson_health*5000,
 		ARMOR_FOOTBALLHAT_ABSORPTION = 1,
 
 	    ARMOR_OXHAT = wilson_health*5000,
 		ARMOR_OXHAT_ABSORPTION = 1,
 
-		ARMORDRAGONFLY = wilson_health * 9,
+		ARMORDRAGONFLY = wilson_health * 9000,
 		ARMORDRAGONFLY_ABSORPTION = 0.7,
 		ARMORDRAGONFLY_FIRE_RESIST = 1,
 
 		ARMORBEARGER_SLOW_HUNGER = -0.25,
 
 
-		ARMOR_WATHGRITHRHAT = wilson_health * 5,
+		ARMOR_WATHGRITHRHAT = wilson_health * 5000,
 		ARMOR_WATHGRITHRHAT_ABSORPTION = .8,
 
 
-		ARMOR_RUINSHAT = wilson_health*8,
+		ARMOR_RUINSHAT = wilson_health*8000,
 		ARMOR_RUINSHAT_ABSORPTION = 0.9,
 		ARMOR_RUINSHAT_PROC_CHANCE = 0.33,
 		ARMOR_RUINSHAT_COOLDOWN = 5,
 		ARMOR_RUINSHAT_DURATION = 4,
 		ARMOR_RUINSHAT_DMG_AS_SANITY = 0.05,
 
-		ARMOR_SLURTLEHAT = wilson_health*5,
+		ARMOR_SLURTLEHAT = wilson_health*5000,
 		ARMOR_SLURTLEHAT_ABSORPTION = 0.9,
-	    ARMOR_BEEHAT = wilson_health*5,
+	    ARMOR_BEEHAT = wilson_health*5000,
 		ARMOR_BEEHAT_ABSORPTION = .8,
-		ARMOR_SANITY = wilson_health * 5,
+		ARMOR_SANITY = wilson_health * 5000,
 		ARMOR_SANITY_ABSORPTION = .95,
 		ARMOR_SANITY_DMG_AS_SANITY = 0.10,
 
@@ -1083,10 +1083,10 @@ function Tune(overrides)
 
 		BASE_COOK_TIME = night_time*.3333,
 
-	    TALLBIRDEGG_HEALTH = 15;
-	    TALLBIRDEGG_HUNGER = 15,
-	    TALLBIRDEGG_COOKED_HEALTH = 25;
-	    TALLBIRDEGG_COOKED_HUNGER = 30,
+	    TALLBIRDEGG_HEALTH = 150;
+	    TALLBIRDEGG_HUNGER = 150,
+	    TALLBIRDEGG_COOKED_HEALTH = 250;
+	    TALLBIRDEGG_COOKED_HUNGER = 300,
 
 		REPAIR_CUTSTONE_HEALTH = 50,
 		REPAIR_ROCKS_HEALTH = 50/3,
@@ -1266,17 +1266,17 @@ function Tune(overrides)
 		MIN_SMOLDER_TIME = .5*seg_time,
 		MAX_SMOLDER_TIME = seg_time,
 
-		TENT_USES = 6,
-		SIESTA_CANOPY_USES = 6,
+		TENT_USES = 60,
+		SIESTA_CANOPY_USES = 60,
 
 		BEARDLING_SANITY = .4,
-		UMBRELLA_USES = 20,
+		UMBRELLA_USES = 200,
 
 		GUNPOWDER_RANGE = 3,
 		GUNPOWDER_DAMAGE = 200,
 		BIRD_RAIN_FACTOR = .25,
 
-		RESURRECT_HEALTH = 50,
+		RESURRECT_HEALTH = 200,
 
 		SEWINGKIT_USES = 5,
 		SEWINGKIT_REPAIR_VALUE = total_day_time*5,
@@ -1370,7 +1370,7 @@ function Tune(overrides)
 		WX78_MOISTURE_DRYING_DAMAGE = -.3,
 
 		WALANI_HEALTH = 3000,
-		WALANI_SANITY = 200,
+		WALANI_SANITY = 2000,
 		WALANI_HUNGER = 2000,
 		WALANI_SANITY_RATE_MODIFIER = -0.1,
 		WALANI_HUNGER_RATE_MODIFIER = 0.2,
@@ -1388,8 +1388,8 @@ function Tune(overrides)
 		WILBUR_SPEED_BONUS = 2.5,
 		WILBUR_TIME_TO_RUN = 3,
 		WILBUR_RUN_HUNGER_RATE_MULT = 0.33,
-		WILBUR_HEALTH = 1250,
-		WILBUR_HUNGER = 1750,
+		WILBUR_HEALTH = 5000,
+		WILBUR_HUNGER = 2000,
 		WILBUR_SANITY = 1500,
 
 		WOLFGANG_HUNGER = 3000,
@@ -1419,14 +1419,14 @@ function Tune(overrides)
 		WATHGRITHR_DAMAGE_MULT = 5,
 		WATHGRITHR_ABSORPTION = 0.9,
 
-		WEBBER_HEALTH = 175,
-		WEBBER_SANITY = 100,
-		WEBBER_HUNGER = 175,
+		WEBBER_HEALTH = 1750,
+		WEBBER_SANITY = 1000,
+		WEBBER_HUNGER = 1750,
 
-		WENDY_DAMAGE_MULT = -0.25,
+		WENDY_DAMAGE_MULT = 10,
 		WENDY_SANITY_MULT = .75,
 
-		WES_DAMAGE_MULT = -0.25,
+		WES_DAMAGE_MULT = 10,
 
 		WICKERBOTTOM_SANITY = 250,
 	    WICKERBOTTOM_STALE_FOOD_HUNGER = .333,
@@ -1651,9 +1651,9 @@ function Tune(overrides)
 		REDBARREL_DAMAGE = 400,
 
 	    -- Global doydoy controls
-	    DOYDOY_MAX_POPULATION = 100,
+	    DOYDOY_MAX_POPULATION = 200,
 	    DOYDOY_SPAWN_TIMER = total_day_time * 2, -- try to mate some doydoy's after this ammount of time + random variance
-		DOYDOY_SPAWN_VARIANCE = total_day_time,
+		DOYDOY_SPAWN_VARIANCE = seg_time,
 		DOYDOY_MATING_RANGE = 20,
 		DOYDOY_MATING_DANCE_TIME = 1, -- how long should they dance?
 		DOYDOY_MATING_DANCE_DIST = 3, -- how far away should they dance?
@@ -1663,20 +1663,20 @@ function Tune(overrides)
 	    DOYDOY_HERD_SIZE = 100,
 	    DOYDOY_HERD_GATHER_RANGE = 40,
 
-		DOYDOY_EGG_HATCH_TIMER = total_day_time * 2,
-		DOYDOY_EGG_HATCH_VARIANCE = total_day_time/2,
+		DOYDOY_EGG_HATCH_TIMER = seg_time,
+		DOYDOY_EGG_HATCH_VARIANCE = seg_time/2,
 
 		DOYDOY_HEALTH = 100,
 		DOYDOY_WALK_SPEED = 2,
 
 		DOYDOY_BABY_HEALTH = 25,
 		DOYDOY_BABY_WALK_SPEED = 5,
-		DOYDOY_BABY_GROW_TIME = total_day_time * 2, --time to grow up
+		DOYDOY_BABY_GROW_TIME = seg_time * 1, --time to grow up
 
 		DOYDOY_TEEN_HEALTH = 75,
 		DOYDOY_TEEN_WALK_SPEED = 1.5,
 		DOYDOY_TEEN_SCALE = 0.8,
-		DOYDOY_TEEN_GROW_TIME = total_day_time * 1, --time to grow up
+		DOYDOY_TEEN_GROW_TIME = seg_time * 1, --time to grow up
 
 		-- When you kill doydoys
 		DOYDOY_INNOCENCE_REALLY_BAD = 50, -- less than 2 doydoy's left, you get krampus
@@ -1835,8 +1835,8 @@ function Tune(overrides)
 	    SUPERTELESCOPE_RANGE = 400,
 
 	    -- cactus spike
-	    NEEDLESPEAR_DAMAGE = wilson_attack/2, -- wilson_attack is the default damage of a normal spear
-	    NEEDLESPEAR_USES = 5,
+	    NEEDLESPEAR_DAMAGE = wilson_attack, -- wilson_attack is the default damage of a normal spear
+	    NEEDLESPEAR_USES = 50,
 
 	    PEG_LEG_DAMAGE = wilson_attack, -- wilson_attack is the default damage of a normal spear
 	    PEG_LEG_USES = 50,
@@ -1858,13 +1858,13 @@ function Tune(overrides)
 	    VOLCANOBOOK_FIRERAIN_DELAY = 0.5,
 
 	    COCONADE_FUSE = 5,
-	  	COCONADE_DAMAGE = 250,
+	  	COCONADE_DAMAGE = 2500,
     	COCONADE_EXPLOSIONRANGE = 6,
     	COCONADE_BUILDINGDAMAGE = 10,
 
     	COCONADE_POISON_CLOUD_DURATION = 3,
 
-	  	COCONADE_OBSIDIAN_DAMAGE = 350,
+	  	COCONADE_OBSIDIAN_DAMAGE = 3500,
     	COCONADE_OBSIDIAN_EXPLOSIONRANGE = 9,
     	COCONADE_OBSIDIAN_BUILDINGDAMAGE = 15,
 
@@ -1954,8 +1954,8 @@ function Tune(overrides)
 		WHALEHUNT_ALTERNATE_BEAST_CHANCE_MIN = 0.05,
 	    WHALEHUNT_ALTERNATE_BEAST_CHANCE_MAX = 0.33,
 	    WHALEHUNT_SPAWN_DIST = 40,
-	    WHALEHUNT_COOLDOWN = total_day_time*1.2,
-	    WHALEHUNT_COOLDOWNDEVIATION = total_day_time*.3,
+	    WHALEHUNT_COOLDOWN = total_day_time*0.5,
+	    WHALEHUNT_COOLDOWNDEVIATION = total_day_time*0.3,
 	    WHALEHUNT_MIN_TRACKS = 2,
 	    WHALEHUNT_MAX_TRACKS = 4,
 	    WHALEHUNT_RESET_TIME = 10,
@@ -2021,8 +2021,8 @@ function Tune(overrides)
 		BALLPHIN_MIN_POOP_PERIOD = seg_time * .5,
 		BALLPHIN_DROWN_RESCUE_CHANCE = 1,
 		BALLPHIN_HEALTH = 200,
-		BALLPHIN_DAMAGE = 75,
-		BALLPHIN_ATTACK_PERIOD = 2,
+		BALLPHIN_DAMAGE = 100,
+		BALLPHIN_ATTACK_PERIOD = 1,
 
 	    DRAGOON_TARGET_DIST = 8,
 		DRAGOON_KEEP_TARGET_DIST = 10,
@@ -2038,9 +2038,9 @@ function Tune(overrides)
 
 		WHALE_ROT_TIME =
 	    {
-	        {base=2*day_time, random=0.5*day_time}, -- bloat1
-	        {base=2*day_time, random=0.5*day_time}, -- bloat2
-	        {base=1*day_time, random=0.5*day_time}, -- bloat3
+	        {base=2*seg_time, random=0.5*seg_time}, -- bloat1
+	        {base=2*seg_time, random=0.5*seg_time}, -- bloat2
+	        {base=1*seg_time, random=0.5*seg_time}, -- bloat3
 	    },
 
 	    JUNGLETREE_CHOPS_SMALL = 1,
@@ -2098,8 +2098,8 @@ function Tune(overrides)
 		RAINBOWJELLYFISH_LIGHT_RADIUS = 3,
 		RAINBOWJELLYFISH_LIGHT_DURATION = 90,
 
-	    ELEPHANTCACTUS_DAMAGE = 20,
-	    ELEPHANTCACTUS_HEALTH = 400,
+	    ELEPHANTCACTUS_DAMAGE = 50,
+	    ELEPHANTCACTUS_HEALTH = 4000,
 	    ELEPHANTCACTUS_RANGE = 5,
 	    ELEPHANTCACTUS_REGROW_PERIOD = 2,
 
@@ -2185,7 +2185,7 @@ function Tune(overrides)
 		FOOD_SPEED_AVERAGE = 30, -- eating roasted coffee beans
 		FOOD_SPEED_LONG = total_day_time / 2, -- drinking coffee
 
-		SAND_REGROW_TIME = total_day_time*2, -- sand dune regrow time
+		SAND_REGROW_TIME = seg_time, -- sand dune regrow time
 		SAND_REGROW_VARIANCE = total_day_time, -- sand dune regrow variance
 		SAND_DEPLETE_CHANCE = 0.25, -- chance of sandhill depleting during "green" season (0.25 means a 25% chance)
 
@@ -2206,7 +2206,7 @@ function Tune(overrides)
 	    ROGUEWAVE_HIT_DAMAGE = 10,
 	    ROGUEWAVE_SPEED_MULTIPLIER = 3,
 
-	    ARMORSEASHELL = wilson_health * 5,
+	    ARMORSEASHELL = wilson_health * 5000,
 	    ARMORSEASHELL_ABSORPTION = 0.75,
 
 	    SOLOFISH_WALK_SPEED = 5,
@@ -2230,7 +2230,7 @@ function Tune(overrides)
 
 
 	    ICEMAKER_SPAWN_TIME = seg_time,
-	    ICEMAKER_FUEL_MAX = seg_time * 3,
+	    ICEMAKER_FUEL_MAX = total_day_time * 300,
 	    CORAL_MINE = 1,
 
 	    CORAL_BRAIN_REGROW = total_day_time * 1,
@@ -2242,17 +2242,17 @@ function Tune(overrides)
 	    SHARX_SPEED = 10,
 
 	    TRAWLNET_MAX_ITEMS = 9, --Don't make this larger than 9 without talking to Dave
-	    TRAWLNET_ITEM_DISTANCE = 100, --How far you have to travel to get another item
+	    TRAWLNET_ITEM_DISTANCE = 10, --How far you have to travel to get another item
 	    TRAWLING_SPEED_MULT = -0.25,
 	    TRAWL_SINK_TIME = seg_time * 3,
 
 	    LIMESTONEWALL_HEALTH = 500,
 		ENFORCEDLIMESTONEWALL_HEALTH = 750,
-	    ARMORLIMESTONE = wilson_health * 5.5,
+	    ARMORLIMESTONE = wilson_health * 5500,
 		ARMORLIMESTONE_ABSORPTION = 0.7,
 		ARMORLIMESTONE_SPEED_MULT = -0.1,
 
-		ARMORCACTUS = wilson_health*300,
+		ARMORCACTUS = wilson_health*3000,
 		ARMORCACTUS_ABSORPTION = 1,
 		ARMORCACTUS_DMG = wilson_attack,
 
