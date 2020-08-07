@@ -2252,9 +2252,9 @@ function Tune(overrides)
 		ARMORLIMESTONE_ABSORPTION = 0.7,
 		ARMORLIMESTONE_SPEED_MULT = -0.1,
 
-		ARMORCACTUS = wilson_health*3,
-		ARMORCACTUS_ABSORPTION = .8,
-		ARMORCACTUS_DMG = wilson_attack/2,
+		ARMORCACTUS = wilson_health*300,
+		ARMORCACTUS_ABSORPTION = 1,
+		ARMORCACTUS_DMG = wilson_attack,
 
 		MAPWRAPPER_TELEPORT_RANGE = 2,
 		MAPWRAPPER_LOSECONTROL_RANGE = 8,
@@ -2272,7 +2272,7 @@ function Tune(overrides)
 
 	    WINDBREAKER_PERISHTIME = total_day_time*500, --was 15
 	    AERODYNAMICHAT_PERISHTIME = total_day_time*500, --was 8
-	    AERODYNAMICHAT_SPEED_MULT = 2,
+	    AERODYNAMICHAT_SPEED_MULT = 5,
 
 	    CAPTAINHAT_PERISHTIME = total_day_time*500, --I boosted pirate and captain from 10 segments
 	    PIRATEHAT_PERISHTIME = total_day_time*500,
@@ -2294,7 +2294,7 @@ function Tune(overrides)
 	    SHARKBAIT_CROCODOG_SPAWN_MULT = 0.005, --Chance of spawning a crocodog is this number multiplied by hunger value of the food
         PUDDLE_CROCODOG_SPAWN_CHANCE = 0.2,
 
-	    SHARK_HAT_PERISHTIME = total_day_time*9,
+	    SHARK_HAT_PERISHTIME = total_day_time*90,
 
 	 	DO_SEA_DAMAGE_TO_BOAT = true,
 	 	BOAT_REPAIR_KIT_HEALING = 5000,
@@ -2318,9 +2318,9 @@ function Tune(overrides)
 	 	VOLCANO_FIRERAIN_LAVA_CHANCE = 0.5,
 	 	VOLCANO_DRAGOONEGG_CHANCE = 0.25,
 
-	    CHIMINEA_FUEL_MAX = (night_time+dusk_time)*2,
+	    CHIMINEA_FUEL_MAX = (night_time+dusk_time)*200,
 	    CHIMINEA_FUEL_START = night_time+dusk_time,
-	    CHIMINEA_BONUS_MULT = 2,
+	    CHIMINEA_BONUS_MULT = 5,
 
 	    LAVAPOOL_FUEL_MAX = (night_time+dusk_time),
 	    LAVAPOOL_FUEL_START = (night_time+dusk_time)*.75,
@@ -2417,8 +2417,8 @@ function Tune(overrides)
 		---------------------------------------------------
 
 		-- QUACKERINGRAM
-		QUACKERINGRAM_USE_COUNT = 15,
-		QUACKERINGRAM_DAMAGE = 150,
+		QUACKERINGRAM_USE_COUNT = 15000,
+		QUACKERINGRAM_DAMAGE = 1500,
 		QUACKERINGRAM_TIMEOUT = 1,
 
 	    SEASHELL_REGEN_TIME = total_day_time * 2, --So small for temp testing
@@ -2450,15 +2450,15 @@ function Tune(overrides)
         SPEAR_LAUNCHER_DAMAGE_MOD = 3,
         SPEAR_LAUNCHER_ATTACK_RANGE = 12,
         SPEAR_LAUNCHER_HIT_RANGE = 14,
-        SPEAR_LAUNCHER_USES = 8,
-        SPEAR_LAUNCHER_SPEAR_WEAR = 10,
+        SPEAR_LAUNCHER_USES = 800,
+        SPEAR_LAUNCHER_SPEAR_WEAR = 1,
 
         WOODLEGSHAT_PERISHTIME = total_day_time*10,
         WOODLEGSHAT_TREASURES = 6,
 
         POOP_THROWN_DAMAGE = 10,
 
-        OX_FLUTE_USES = 5,
+        OX_FLUTE_USES = 1000,
 
         TAR_EXTRACTOR_MAX_FUEL_TIME = total_day_time*200,
         SEA_YARD_MAX_FUEL_TIME = total_day_time*200,
